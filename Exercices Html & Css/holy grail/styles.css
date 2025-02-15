@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* DECLARAMOS EL FLEX COLUMN y min-height debido a q cuando pongamos en el fotter margin-top auto nos ponga lo más abajo posible, se puede añadir para asegurarnos align-itemns start y luego al header, main-wraper y fotter ponerle width 100%*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -----------NAVBAR----------- */
+/* tambien lo hago de chulo coloque el z-index xq se sobre escribia con los otros position jiji*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar {
+    background-color: #0A323C;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    color: #f0e6d2;
+}
+
+.navbar__list {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__item {
+    list-style-type: none;
+}
+
+.navbar__link {
+    display: inline-block;
+    color: inherit;
+    font-size: 1.5em;
+    font-weight: inherit;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbar__link:hover {
+    background-color: #0397AB44;
+}
+
+/* -----------ASIDE----------- */
+
+.main-wrapper {
+    display: flex;
+    /* Este flex-grow se combina con lo q hicimos en el body para q todo el contenido de separación entre el header y footer se rellene*/
+    flex-grow: 1;
+}
+
+.aside {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #C8AA6E;
+    background-color: #5B5A56;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px 20px;
+    /* ESTO LO HIZE POR MAMON nomas pero ta rico para q abajo se auto baje el mini indice del contenido*/
+    position: relative;
+}
+
+.aside h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Medianamente mala practica pero lo hago solo apra q funcione lo de position sticky en aside__list y en el titulo de ese mismo aside*/
+.aside__title {
+    position: sticky;
+    top: 50px;
+}
+
+.aside__list{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 90px;
+}
+
+.aside__item {
+    list-style-type: none;
+}
+
+.aside__link {
+    display: block;
+    color: inherit;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.aside__link:hover {
+    background-color: #C8AA6E;
+    color: #5B5A56;
+}
+
+
+
+/* -----------MAIN----------- */
+
+.main {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #F0E6D2;
+    background-color: #A09B8C;
+    padding: 10px 20px;
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+.main h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    text-wrap: balance;
+}
+
+.main p {
+    text-wrap: pretty;
+    font-size: 1em;
+    text-align: justify;
+}
+
+
+/* -----------FOOTER----------- */
+.footer {
+    margin-top: auto;
+    background-color: #1E2328;
+    color: #CDFAFA;
+    text-align: center;
+}
+
+.footer p {
+    padding: 15px 0;
+}
+
+
+@media screen and (max-width:600px) {
+    .aside:last-child {
+        display: none;
+    }
+
+    .main h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar__link {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane PAPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Declaramos un checkbox el cual lo conectamos con el label por medio del for a su id, cuando le demos click al al texto "=" se activara tambien el checkbox
+        El rol button lo declaramos para la accesibilidad de la página-->
+        <input type="checkbox" id="open-menu">
+        <label for="open-menu" class="header__menu-button" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </label>
+        <!-- Es importante poner las imagenes en un div o contenedor para poder manipularlas mejor-->
+        <div class="header__logo-conteiner">
+            <a href="extra.html">
+                <img class="header__logo" src="Arcane-Logo.png" alt="Logo de arcane"> 
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="#main">About Me</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main" id="main"> 
+        <div class="main__wrapper">
+            <div class="main__image-conteiner">
+                <img class="main__image" src="Portada.jpg" alt="Portada de jinx">
+            </div>
+            <div class="main__data-conteiner">
+                <div class="main__profile-conteiner">
+                    <h1 class="profile-conteiner--title">Why Arcane is art?</h1>
+                    <p class="profile-conteiner--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nobis quas! Neque in architecto ipsam expedita esse natus aspernatur modi blanditiis, ducimus itaque, quas ex mollitia quod hic fugiat ipsum.</p>
+                </div>
+                <div class="main__genders-conteiner">
+                    <h2 class="genders-conteiner--title">Gender</h2>
+                    <ul class="genders-conteiner--list">
+                        <li class="gender-conteiner--item">
+                            <div class="gender-conteiner--load-bar">
+                                <div class="gender-conteiner--load-bar__bar bar--60">60%</div>
+                            </div>
+                            <span class="gender-conteiner--text">Action</span>
+                        </li>
+                        <li class="gender-conteiner--item">
+                            <div class="gender-conteiner--load-bar">
+                                <div class="gender-conteiner--load-bar__bar bar--90">90%</div>
+                            </div>
+                            <span class="gender-conteiner--text">Animated</span>
+                        </li>
+                        <li class="gender-conteiner--item">
+                            <div class="gender-conteiner--load-bar">
+                                <div class="gender-conteiner--load-bar__bar bar--80">80%</div>
+                            </div>
+                            <span class="gender-conteiner--text">Drama</span>
+                        </li>
+                        <li class="gender-conteiner--item">
+                            <div class="gender-conteiner--load-bar">
+                                <div class="gender-conteiner--load-bar__bar">100%</div>
+                            </div>
+                            <span class="gender-conteiner--text">Cinema</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="portfolio" id="portfolio">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <div class="portfolio__proyects">
+            <div class="proyects--item">Proyect 1</div>
+            <div class="proyects--item">Proyect 2</div>
+            <div class="proyects--item">Proyect 3</div>
+            <div class="proyects--item">Proyect 4</div>
+            <div class="proyects--item">Proyect 5</div>
+            <div class="proyects--item">Proyect 6</div>
+        </div>
+    </aside>
+    
+    <section class="contact" id="contact">
+        <h2 class="contact__title">About Me</h2>
+        <form class="contact__form">
+            <div class="contact__input-conteiner">
+                <label>
+                    Username:
+                    <input class="contact__input" type="text" placeholder="Username">
+                </label>
+            </div>
+            <div class="contact__input-conteiner">
+                <label>
+                    Email:
+                    <input class="contact__input" type="email" placeholder="Email">
+                </label>
+            </div>
+            <div class="contact__input-conteiner">
+                <label>
+                    Subject:
+                    <input class="contact__input" type="text" placeholder="Message Subject">
+                </label>
+            </div>
+            <div class="contact__input-conteiner">
+                <label>
+                    Message:
+                    <textarea rows="3" class="contact__input input--textarea" placeholder="Description"></textarea>
+                </label>
+            </div>
+            <div class="contact__input-conteiner">
+                <input class="contact__input input--button" type="submit" value="Send">
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        @2022 Arcane PAPA
+    </footer>
+
+    <script src="test.js"></script>
+</body>
+</html>

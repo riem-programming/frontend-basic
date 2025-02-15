@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Por un motivo no poner el 100vh o 100vw en body para width y height*/
+    font-family: sans-serif;
+    background-color: #1E282D;
+    color: #C8AA6E;
+    position: relative;
+    z-index: -100;
+}
+
+/* ---------- HEADER ----------*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border-bottom: 4px solid #0A323C;
+    container-type: inline-size;
+    container-name: header;
+    position: sticky;
+    top: 0;
+    animation: header both;
+    animation-timeline: scroll();
+    animation-range: 10px 100px;
+}
+
+#open-menu {
+    display: none
+}
+
+.header__menu-button {
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+/* Si esta checkeado vamos a cambiar al hermano .header__nav*/
+#open-menu:checked ~ .header__nav {
+    display: flex;
+    background-color: #0A323C;
+}
+
+.header__menu-button svg {
+    width: 2rem;
+}
+
+.header__menu-button svg path {
+    fill: #C8AA6E;
+}
+
+.header__logo-conteiner {
+    
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 100px;
+    margin: 10px 20px;
+}
+
+.header__nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+.header__nav-list {
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40vh;
+}
+
+.header__nav-item {
+    list-style-type: none;
+}
+
+.header__nav-link {
+    color: inherit;
+    padding: 10px 20px;
+}
+
+/* Cuando no señalamos el elemento o lo clickeamos le quitamos el subrayado*/
+.header__nav-link:not(:is(:hover,:active)) {
+    text-decoration: none;
+}
+
+/* ---------- HEADER QUERIES ----------*/
+
+@container header (min-width: 800px) {
+    .header__menu-button {
+        display: none;
+    }
+
+    .header__nav {
+        display: flex;
+        width: auto;
+        height: auto;
+        position: relative;
+        margin-right: 30px;
+    }
+
+    .header__nav-list {
+        margin-top: 0;
+        height: auto;
+        flex-direction: row;
+    }
+}
+
+@keyframes header {
+    from {
+        background-color: #1E282D;
+        border-bottom: 4px solid #0A323C;
+    }
+    to {
+        background-color: #1E282D88;
+        border: none;
+    }
+}
+
+/* ---------- HEADER END ----------*/
+
+/* ---------- MAIN ----------*/
+
+.main {
+    margin-top: 20px;
+    container-type: inline-size;
+    container-name: main;
+    position: relative;
+    z-index: -100;
+    animation: main 2s -0.6s both;
+}
+
+
+.main__wrapper {
+    
+    background-color: #010A13;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.main__image-conteiner {
+    margin: auto;
+    max-height: 370px;
+    overflow: hidden;
+}
+
+.main__image{
+    max-width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+.main__data-conteiner {
+    padding: 5px 10px;
+}
+
+.main__profile-conteiner {
+
+}
+
+.profile-conteiner--title {
+    text-align: center;
+    font-size: 2.1em;
+    text-wrap: balance;
+}
+
+.profile-conteiner--text {
+    font-size: 1em;
+    text-wrap: pretty;
+}
+
+.main__genders-conteiner {
+
+}
+
+.genders-conteiner--title {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.genders-conteiner--list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gender-conteiner--item {
+    
+}
+
+.gender-conteiner--load-bar {
+    display: inline-block;
+    min-width: 200px;
+    width: 70%;
+    border: 2px solid #0397AB;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.gender-conteiner--load-bar__bar {
+    background-color: #0397AB;
+    color: #F0E6D2;
+    padding-left: 5px;
+}
+
+.bar--60 {
+    width: 60%;
+}
+
+.bar--80 {
+    width: 80%;
+}
+
+.bar--90{
+    width: 90%;
+}
+
+.gender-conteiner--text {
+    margin-left: 5px;
+}
+
+/* ---------- MAIN QUERIE ----------*/
+
+@container main (min-width: 1000px) {
+    .main__wrapper {
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+    .main__data-conteiner {
+        margin: auto;
+    }
+
+    .main__image-conteiner {
+        border-radius: 20px 0 0 20px;
+        max-height: none;
+    }
+
+    .main__image{
+        width: 900px;
+        min-height: 600px;
+    }
+
+    .profile-conteiner--title {
+        font-size: 4em;
+        padding: 10px 0;
+    }
+
+    .main__genders-conteiner {
+        margin-top: 20px;
+    }
+    
+    .genders-conteiner--title {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .gender-conteiner--load-bar__bar{
+        padding: 4px 5px;
+    }
+}
+
+@keyframes main {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---------- MAIN END ----------*/
+
+/* ---------- PORTFOLIO ----------*/
+
+.portfolio {
+    margin: auto;
+    width: 90%;
+    margin-top: 100px;
+    position: relative;
+    z-index: -100;
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    container-name: portfolio;
+    animation: portfolio both;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
+}
+
+.portfolio__title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.portfolio__proyects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+    gap: 10px;
+}
+
+.proyects--item {
+    /* PODEMOS PONERLE GRADIENTES A NUESTRA IMAGEN ENCIMA*/
+    background-image: linear-gradient(#0009,#0009), url(Main.jpg);
+    background-size: cover;
+    color: #CDFAFA;
+    font-weight: 500;
+    font-size: 1.5em;
+    cursor: pointer;
+    /* UNA MANERA GOOOOOOOOOOOOOOOOOD de centrar todo el contenido de adentro*/
+    display: grid;
+    place-content: center;
+}
+
+.proyects--item:hover {
+    opacity: 0.6;
+}
+
+
+
+/* ---------- PORTFOLIO QUERIES ----------*/
+
+@container portfolio (min-width: 810px) {
+    .proyects--item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .proyects--item:last-child {
+        grid-column: span 2;
+    }
+}
+
+@container portfolio (min-width: 1200px) {
+    .proyects--item:last-child {
+        grid-column: auto;
+    }
+}
+
+@keyframes portfolio {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---------- CONTACT ----------*/
+
+.contact {
+    margin: auto;
+    margin-top: 40px;
+    max-width: 750px;
+    padding: 10px;
+    container-type: inline-size;
+    container-name: contact;
+    margin-bottom: 50px;
+    animation: contact both;
+    animation-timeline: view();
+    animation-range-start: cover 20%;
+    animation-range-end: contain 40%;
+}
+
+.contact__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact__form {
+    display: grid;
+    grid-template-areas: 
+    "username"
+    "email"
+    "subject"
+    "message "
+    "button";
+    gap: 20px;
+}
+
+.contact__input-conteiner label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact__input-conteiner:nth-child(1) {
+    grid-area: username;
+}
+
+.contact__input-conteiner:nth-child(2) {
+    grid-area: email;
+}
+
+.contact__input-conteiner:nth-child(3) {
+    grid-area: subject;
+}
+
+.contact__input-conteiner:nth-child(4) {
+    grid-area: message;
+}   
+
+.contact__input-conteiner:nth-child(5) {
+    grid-area: button;
+    margin-top: 15px;
+}
+
+.contact__input {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.input--button {
+    background-color: #CDFAFA;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.input--textarea {
+    resize: none;
+}
+
+/* ---------- CONTACT QUERIES ----------*/
+
+@container contact (min-width: 550px) {
+    .contact__form {
+        grid-template-areas: 
+        "username email"
+        "subject subject"
+        "message message"
+        "button button";
+    }
+}
+
+@keyframes contact {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---------- CONTACT END ----------*/
+
+/* ---------- FOOTER ----------*/
+
+.footer {
+    margin-top: auto;
+    padding: 125px 0;
+    background-color: #1E2328;
+    display: grid;
+    place-content: center;
+    opacity: 0.7;
+}
+
+
+
+/* ---------- FOOTER QUERIES ----------*/
+
+/* muy GOOOOOOOOOOOOOOOOOOOD 
+display: grid;
+    place-content: center;*/
+
+/* ---------- FOOTER END ----------*/
+
+
