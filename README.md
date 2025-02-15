@@ -54,10 +54,6 @@ One of my key projects is simulating an Amazon product carousel. In this project
 
 Feel free to explore the code, suggest improvements, or open an issue if you have any questions. Contributions are always welcome!
 
-## License
-
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 _Happy coding!_
