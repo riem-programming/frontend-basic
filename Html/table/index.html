@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Importante entender que table se divide en header, body y footer pero en este caso empeiza con 't', ahora luego tenemos al tr como representante de las filas, luego por fila tenemos valores th que serian algo como columna pero dependientes de su fila-->
+    <!-- MUY IMPORTANTE LA FUNCION colspan que esta abajo, que nos sirve para rellenar más de 1 celda perfecto para el footer-->
+    <!-- MUY IMPORTANTE LA FUNCION border-spacing en css que tiene este elemento para separar sus celdas en horizontal-->
+    <table>
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Orange</td>
+                <td>12</td>
+                <td>$14</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>5</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td>Strawberry</td>
+                <td>3</td>
+                <td>$18</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td colspan="2">$44</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

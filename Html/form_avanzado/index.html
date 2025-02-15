@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Testing form with big input</title>
+</head>
+<body>
+    <form>
+        <h1>
+            Form the Rafa
+        </h1>
+        <div class="form-input">
+            <!-- El label nos surbe para dar información de un input y el for solo se conceta con el id de ese input actuando cuando nosotros le demos click al label señale al input respectivo-->
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="form-input">
+            <!-- La otra opcion para ese label es poner el input dentro del label si no queremos usar el for y el id, según el men la mejor practica es esto.
+            No olvidemos el em que puede afectar a input lo de label-->
+            <label>
+                Email:
+                <input class="correction-size-input" type="email" placeholder="Email">
+            </label>
+        </div>
+        <div class="form-input">
+            <label>Description:</label>
+            <!--Esta es la nueva cadena y rows indica el numero de filas q acepta-->
+            <!--como atributo de textarea podemos poner readonly que hace q el elemento sea incambiable su contenido y esa info se envie mientras q disabled hace lo mismo solo que él no enviara la info al formulario-->
+            <textarea disabled rows="5" placeholder="Description"></textarea>
+        </div>
+
+
+        <!--ELEMENT SELECT & OPTION-->
+        <!-- como ya sabemos el value es como el nombre de la variable que conecta con el backend o js, y lo de entro de option sera el valor que vea el usuario para seleccionar-->
+        <div class="form-input">
+            <label>Tipo de Usuario
+                <select class="correction-size-input">
+                    <option value="user1">Rafa</option>
+                    <option value="user2">Bucher</option>
+                    <option value="user3">Owama</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- DATALIST & OPTION-->
+        <!-- En este elemento value seria el valor que pondra en el input y lo que esta dentro de option sera el valor que saldra como descripción es opcional, importante relacionar en list de input el id de datalist-->
+        <div class="form-input">
+            <label>Referente
+                <input class="correction-size-input" list="referente">
+                <datalist id="referente">
+                    <option value="Rafa">El más pingon</option>
+                    <option value="Owama">La más puta</option>
+                    <option value="buchER">El más pasivo</option>
+                </datalist>
+            </label>
+        </div>
+        
+        <!-- FILDSET % LEGEND-->
+        <!-- Recapitulando los 2 primeros input, nosotros podemos seleccionarlos en una seccion con fildset-->
+        <fieldset>
+            <legend>Testing fildset</legend>
+            <div class="form-input">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="form-input">
+                <label>
+                    Email:
+                    <input class="correction-size-input" type="email" placeholder="Email">
+                </label>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

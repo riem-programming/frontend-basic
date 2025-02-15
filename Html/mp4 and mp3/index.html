@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing videos and mp3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Según lo testeado solo tankea archivos descargados, a pesar que funcione en audio tmb los mp4 sobrecargarias la página por las puras, ahora propiedades interesantes:
+    -Controls: sin él no funciona audio y en el caso del video no se podria manipular para activar el volumen, pero para fondos con videos no seria necesario mientras se repita no problem
+    -Autoplay & muted: para q el video se reprodusca cuando ingresen a la página deben estar juntos para que funcionen y lógicamente empezara el video estando muteado, pero iniciara de manera autoamtica
+    -Loop: solamente pone en un bucle infinito el video hasta q el usuario ponga stop 
+    
+    El contenido dentro de video o audio es el q saldra en caso q no funque el video o audio no le cargue o una cosa-->
+    <div>
+        <video controls autoplay muted loop src="Y2meta.app - ESTO VA A SER ÉPICO PAPUS!.mp4" >
+            <!-- Ahora podemos añadir subtitulos pero para eso necesitamos un archivo .vtt para poner en el src pero explicaremos algunas cosas:
+                defaul = automaticamente activa subtitulos
+                kind = define el tipo 'no entendi bien jiji pero elijio eso'
+                srclang = ayuda a la maquina a saber el tipo de subtitulo en español
+                label = lo que verá el usuario cuando elija un subtitulo
+            <track src="archivo.vtt" default kind="captions" srclang="es" label="Español(Lationamerica)"> -->
+            Tu pc es una basura dejame decirte para que no te cargue parcero gonorrea sapo triple hijueputa
+        </video>
+    </div>
+    <div>
+        <audio controls src="koit to uso.mp3">
+            Tu pc es una poronga
+        </audio>
+    </div>
+    <div>
+        <!-- Tambien podemos poner una imagen de portada antes q inicie el video con poster, este puede ser link como imagen descargada-->
+        <video controls poster="pitochu.png" src="Y2meta.app - ESTO VA A SER ÉPICO PAPUS!.mp4">
+            Sos un pete
+        </video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #444;
+    color: #bbb;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    margin-top: 20px;
+    max-width:  320px;
+    border: 2px solid #bbb;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 15px #fff1;
+    border-spacing: 12px; /* Separacion entre celdas*/
+}
+
+td, th {
+    border-bottom: 2px solid #bbb8;
+    padding: 6px;
+    font-size: 1.2em;
+}
+
+td {
+    color: #aaa;
+    font-size: 1em;
+}
+
+tfoot tr th,tfoot tr td {
+    border-bottom: none;
+    font-size: 1em;
+    padding: 12px;
+}

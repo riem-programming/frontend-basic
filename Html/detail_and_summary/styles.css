@@ -1,0 +1,34 @@
+body {
+    background-color: #333;
+    color: #bbb;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+
+details {
+    box-sizing: border-box;
+    width: 30%;
+    border: 4px solid #bbb;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+summary {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+

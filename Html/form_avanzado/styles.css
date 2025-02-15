@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111a;
+    background: linear-gradient(to bottom, #111a, #6a6);
+    color: #003;
+    font-weight: bold;
+}
+
+form {
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    width: 400px;
+    background-color: #6a6;
+    border-radius: 10px;
+    box-shadow: 0 0 55px #0005;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 3px;
+    
+}
+
+.form-input {
+    padding: 6px 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 6px 8px;
+    border: none;
+    border: 3px solid #044d;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #0005;
+    background-color: #dedede;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: #004;
+    font-weight: 100;
+}
+
+textarea {
+    min-width: 100%;    /* de esa forma se rellena todo el borde*/
+    resize: none;       /* quitamos la opcion de agrandar o hacer chiquito*/
+    min-height: 108px;  /* El minimo de tamaño de altura*/
+}
+
+label {
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+select {
+    font-weight: 100;
+}
+
+option {
+    background-color: #6a6;
+}
+
+.correction-size-input {
+    font-size: 1.2em;
+}
+
+fieldset {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    border: 2px solid #555;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 5px;
+    color: #555;
+    font-weight: 100;
+}

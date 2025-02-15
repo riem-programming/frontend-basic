@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGES ADVANCE</title>
+</head>
+<body>
+    <!-- ENTENDERLO MEJOR TODAVIA 
+    lo poco q entiendo esq el sizes si lo respeta y nos presentara las diferentes imagenes establecidas dependiendo del max-width, el srcset es como recomendación pero no me lo hagarra bien xq al google le chupa un heuvo aveces pero tengo q interiorizar un poco más
+    14:09:29 en video de dalto pero nos menciona algo curioso como en srcset definimos los tamaños y imagenes y en sizes como q aplicamos esas definiciones de manera más insistente uhm un poco más de sentido-->
+    <img src="background_jinx_small.jpeg" srcset="background_jinx_small.jpeg 400w, background_jinx_medium.jpeg 600w, background_jinx_big.jpeg 1000w" sizes="(max-width: 400px) 340px, (max-width: 600px) 650px, 900px" alt="jinx for LOL">
+
+    <div style="margin: 300px;"></div>
+    <picture>
+        <!-- Declaramos el elemento picture y dentro colocamos img donde ponemos la imagen default pero para llegar a esa imagen pasamos por condicionales respecto a la situación, con eso lo declaramos con el elemento source donde ponemos q si es posible carga primero aquella imagen q es tipo .webp despues si la resolución de pantalla es 400px cargamos small y asi sucesivamente
+        ES PRIORITARIO RECORDAR Q TIENE Q IR DE MÁS PEQUEÑO A MAS GRANDE los condicionales source
+        LAS IMAGENES .webp son recomendadas de usar según GOOGLE-->
+        <source srcset="background_jinx.webp" type="image/webp">
+        <source media="(max-width:400px)" srcset="background_jinx_small.jpeg">
+        <source media="(max-width:600px)" srcset="background_jinx_medium.jpeg">
+        <img src="background_jinx_big.jpeg">
+    </picture>
+
+    <!-- ESTAS ETIQUETAS MÁS VAN REFERIDAS A IMAGENES MUY GRANDES PARA TENER MEJOR VELOCIDAD EN LA PÁGINA DE CARGA, para la estructura picture-->
+</body>
+</html>
