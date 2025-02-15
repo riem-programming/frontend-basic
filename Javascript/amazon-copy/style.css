@@ -1,0 +1,169 @@
+* {
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  background-color: #111;
+  padding: 0 24px;
+}
+
+.image-container {
+  width: 120px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  padding: 12px 0;
+}
+
+form input {
+  flex: 1;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  font-size: 24px;
+  padding-left: 24px;
+}
+
+form button {
+  border: none;
+  height: 100%;
+  border-radius: 0 12px 12px 0;
+}
+
+.right-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 12px;
+  font-size: 20px;
+}
+
+.orders-container {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.hover-item:hover {
+  outline: 1px solid white;
+}
+
+.cart-contianer {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+}
+
+.cart-content {
+  display: flex;
+  align-items: center;
+}
+
+.number-products {
+  position: absolute;
+  top: -4px;
+  left: 31px;
+  color: #f7d62a;
+}
+
+.image-aspect {
+  aspect-ratio: 1/1;
+}
+
+.card {
+  /* width: 240px; */
+  min-width: 240px;
+  max-width: 320px;
+  border-left: 1px solid #80808033;
+  border-right: 1px solid #80808033;
+  padding: 12px;
+  font-size: 18px;
+}
+
+.card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  margin: 8px 0;
+}
+
+select {
+  display: block;
+  width: 50px;
+  border: none;
+  padding: 6px 4px;
+  background-color: #ededed;
+  border: 1px solid #00000055;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px 0.5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.card button {
+  margin: auto;
+  margin-top: 36px;
+  background-color: #f7d61a;
+  padding: 10px 48px;
+  border: none;
+  border-radius: 99999px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #00000022;
+}
+
+.card button:hover {
+  background-color: #f7e61a;
+}
+
+.calification {
+  color: cornflowerblue;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icons {
+  display: inline-flex;
+  align-items: center;
+  color: #f7d62a;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 24px 0;
+  justify-items: center;
+  align-items: center;
+  row-gap: 24px;
+}

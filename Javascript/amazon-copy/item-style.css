@@ -1,0 +1,306 @@
+.button {
+  width: 100%;
+  margin: auto;
+  margin-top: 36px;
+  background-color: #f7d61a;
+  padding: 14px 0;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #00000022;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #f7e61a;
+}
+
+main {
+  display: block;
+  padding: 24px 80px;
+}
+
+main h2 {
+  font-size: 32px;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.quantity-items {
+  color: cornflowerblue;
+}
+
+.subtitle {
+  width: 100%;
+  font-size: 28px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.content-main {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  justify-content: center;
+}
+
+.content-products {
+  flex: 1;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.description-order {
+  min-width: 420px;
+  border: 1px solid #00000022;
+  padding: 16px;
+  height: min-content;
+}
+
+.description-order h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.description-container div:last-child {
+  text-align: right;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+hr {
+  background-color: #00000066;
+  height: 1px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: brown;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.optional {
+  font-size: 18px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.optional input {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.item-cart {
+  border: 1px solid #00000022;
+  padding: 24px;
+  padding-bottom: 36px;
+}
+
+.item-cart h4 {
+  color: #339922;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: #fc0 0px 0 1px;
+  margin-bottom: 12px;
+}
+
+.main-card {
+  display: flex;
+
+}
+
+.description-item {
+  display: flex;
+  gap: 12px;
+  padding-right: 24px;
+  flex:1;
+}
+
+.min {
+  height: min-content;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.name-product {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.price {
+  color: brown;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  font-size: 16px;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  color: cornflowerblue;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  text-decoration: underline;
+}
+
+.method-delivery-container {
+    font-size: 18px;
+}
+
+.method-delivery-container .title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 14px;
+}
+
+.input-checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-checkbox input {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    outline: 2px solid gray;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline-offset: 2px;
+}
+
+.input-checkbox input:checked {
+    background-color: cornflowerblue;
+    outline-color: cornflowerblue;
+}
+
+.color {
+    color: #339922;
+    font-weight: bold;
+}
+
+.opacity {
+    color: gray;
+    font-size: 16px;
+}
+
+.dialog {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  padding-top: 220px;
+}
+
+.dialog-container {
+  background-color: white;
+  width: 420px;
+  padding: 36px 24px;
+  padding-bottom: 36px;
+  position: relative;
+  border: none;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.dialog::backdrop {
+  background-color: #00000033;
+  backdrop-filter: blur(1px);
+}
+
+.dialog h4 {
+  font-size: 24px;
+}
+
+.dialog select {
+  margin: auto;
+  margin-top: 8px;
+  width: 120px;
+}
+
+.dialog .section-button {
+  display: flex;
+  gap: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.v1 {
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+
+.v1:hover {
+  background-color: transparent;
+  border-color: black;
+}
+
+.v2 {
+  background-color: cornflowerblue;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.v2:hover {
+  background-color: cornflowerblue;
+  opacity: 0.7;
+}
