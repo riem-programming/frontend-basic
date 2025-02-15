@@ -1,0 +1,42 @@
+/* SELECCIONAMOS SOLO LA PRIMERA LETRA PARA MODIFICAR*/
+section h1::first-letter{
+    font-size: 2em;
+    color: #f00;
+    letter-spacing: -8px;
+}
+
+/*SELECCINOAMOS LA PRIMERA LINEA DE UN PARRAFO Y ESTA TENDRA ESE ESTILADO Y SE ACOMODA RESPONSIVE*/
+section div p::first-line {
+    color: #f00;
+    font-weight: 700;
+}
+
+/* SELECCNIOAMOS LOS SIMBOLOS Q TIENEN LAS LISTAS PARA PERSONALIZARLAS*/
+section ul li::marker {
+    color: #f0f;
+}
+
+/* SELECCINOAMOS EL PLACEHOLDER Q TIENEN LOS INPUTS EN GENERAL*/
+section div input::placeholder {
+    font-size: 1.2em;
+    color: #00f;
+    text-align: center;
+}
+
+/* CUANDO SOSTENEMOS EL CLICK PARA COPIAR ALGO ESE FONDO PODEMOS PERSONALIZARLO*/
+section div p::selection{
+    background-color: #0ff;
+    color: #fff;
+}
+
+/* PROXIMAMENTE SE APRENDERA MÁS*/
+section ul li::before {
+    content: 'Antes';
+    color: #f00;
+}
+
+/* PROXIMAMENTE SE APRENDERA MÁS*/
+section ul li::after {
+    content: 'Despues';
+    color: #00f;
+}

@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 20px;
+    font-size: 32px;
+    border: 4px solid #000;
+    width: 1000px;
+}
+
+
+p::first-letter {
+    /* Primero indicamos el tamaño de altura, en este caso 3 filas de altura, y en el segundo parametro indicamos en que linea empezara en este caso en la segunda linea del parrafo ez*/
+    initial-letter: 3 2;
+    color: #48e;
+    margin-right: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}

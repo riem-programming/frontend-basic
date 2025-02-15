@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+div {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+}
+
+/* rgb(INTESIDAD DE ROJO, INTENSIDAD DE VERDE, INTENSIDAD DE AZUL) en una escala de 0 a 255
+siendo el 255 el color base o estandar*/
+.box-rgb {
+    background: rgb(255, 0, 0);
+}
+
+/* Maneja 3 esquemas #aa-bb-cc, el primero es la intencidad de rojo 'aa' en una escala de 0 a f, lo mismo para 'bb' con el verde y 'cc' para el azul, tambien podemos reducir la expresión en ves de poner 'ff' poner 'f'*/
+.box-hexadecimal {
+    background: #f00;
+}
+
+/* hsl(color base, saturación, brillo), siendo saturación el 100% el color estandar y brillo 50% el color standar*/
+.box-hsl {
+    background: hsl(0, 100%, 50%);
+}
+
+/* El cuarto elemento oculto del color es el brillo representado como 'a' angular*/
+.box-extra {
+    background: rgba(255, 0, 0, 30%);
+    background: #f004; /* En el hexadecimal el cuarto elemento oculto seria el brillo de ese color volverlo más suave*/
+    background: hsla(0, 100%, 50%, 30%);
+}

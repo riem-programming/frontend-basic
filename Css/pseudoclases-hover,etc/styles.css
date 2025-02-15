@@ -1,0 +1,85 @@
+/* EFECTO Q SALDRA CUANDO SEÑALAMOS EL ELEMENTO*/
+h1:hover {
+    color: #00f
+}
+
+/* EFECTO Q SALDRA CUANDO APRETAMOS EL ELEMENTO*/
+h1:active {
+    color: #f00
+}
+
+/* LO MISMO QUE IS, SOLO QUE NO AFECTA EL NIVEL DE JERARQUIA Y LO MANTIENE IGUAL AL ELEMENTO*/
+section :where(.elemento1, li) {
+    color: #f5f;
+}
+
+/* UNA FORMA DE SELECCIONAR, CON NIVEL DE JERQUIA (0,1,1) en donde plateamos que dentro de section vamos a modificar los elementos .elemento1,2,3*/
+section :is(.elemento1,.elemento2,.elemento3) {
+    color: #8d9;
+    font-weight: 700;
+}
+
+/* En caso q sea invalido el input q este dijitando el usuario le saldra color rojo, en este caso el ejemplo se da para un gmail*/
+input:invalid {
+    color: #f00;
+}
+
+/* En caso q sea valido se mostrara el color verde*/
+input:valid {
+    color: #8d8;
+}
+
+/* LA FUNCION HAS AFECTA EL PRIMER ELEMENTO DECLARADO en este caso label, en donde colocamos la condicion de q SI EXISTE EL ACONTECIMIENTO DENTRO DE HAS se presentara estos estilos, tambien puede funcionar para verificar existencia de elementos dentro de label y otros*/
+label:has(input:invalid) {
+    color: #f00;
+}
+
+label:has(input:valid) {
+    color: #8d8;
+}
+
+/* NOS PRESENTARA ESTE ESTILADO DE LINK SI NO HEMOS VISITADO EL LINK Q HACE REFERENCIA EL ELEMENTO*/
+section a:link {
+    color: #f00;
+}
+
+/* LO CONTRARIO, SI YA VISITAOMS ESE LINK SE PRESENTARA ESTE COLOR O ESTILADO*/
+section a:visited {
+    color: #8d8;
+}
+
+.table {
+    background: #ddd;
+    color: aquamarine;
+}
+
+/* ESPECIFICAMOS con not, q afectaremos a todos los elementos declarados excepto aquel elemento q tenga la clase .except*/
+.table li:not(.except) {
+    color: inherit
+}
+
+/* CON LA FUNCION nth-child(2n) es una seleccion de 2 en 2 dentro de .table de los elemento li, donde el elemento número 2 es afectado por el estilado q señalemos adentro, en caso q pongamos 3n seria el elemento número 3 y el recorrido seria de 3 en 3*/
+.table li:nth-child(2n) {
+    background: #888;
+}
+
+/* SELECCIONAMOS AL PRIMER HIJO*/
+.table li:first-child {
+    color: #f00;
+}
+
+/* SELECCIONAMOS AL ÚLTIMO HIJO*/
+.table li:last-child {
+    color: #00f;
+}
+
+/* SELECCIONAMOS EL HIJO NÚMERO 2, usamos el -of-type en ves de -child debido q en caso tengamos elementos en medio de los li o el elemento q quedramos seleccionar los cuenta como número de hijo pero de esta forma especificamente podemos q solo sean de tipo "li"*/
+.table li:nth-of-type(2) {
+    color: #f99;
+}
+
+/* ESPECIFICAMOS Q AQUEL ELEMENTO DIV q se encuentre vacio sera afectado por estos estilados*/
+section div:empty {
+    padding: 10px;
+    border: 2px solid #000;
+}

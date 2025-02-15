@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin-bottom: 20px;
+}
+
+/* Cuando revisamos las medidas al no usar box-sizing el border y el padding hace que aumente las dimensiones del box y de esta forma podemos controlar tener medidas predecibles */
+.box-default {
+    border: 20px solid black;
+    padding: 20px;
+}
+
+.box-new {
+    box-sizing: border-box;         /* Propiedad MUY IMPORTANTE*/
+    border: 20px solid black;
+    padding: 20px;
+}

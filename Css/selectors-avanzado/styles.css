@@ -1,0 +1,43 @@
+/* SELECCION POR ATRIBUTO
+especificamos q solamente las img con el src = /HTML/Pitochu.png seran las modificadas*/
+img[src="/HTML/Pitochu.png"] {
+    width: 100%;
+}
+/* en caso q queramos darle estilos especificos a tipos de imagenes como en este caso a los png podemos hacer utilizando el simbolo "$" q nos señala q termine con... y su contraparte tambien tenemos el "^" q indica q empiece con ....*/
+img[src$=".png"] {
+    width: 400px;
+}
+
+/* SELECCION DESCENDIENTE
+este tipo de seleccion lo único q le importa esq dentro de ul exista un elemento strong, este puede estar protegido por diferentes capas de elementos pero igual sera afectado
+ul es el padre y strong puede ser hijo, nieto, bisnieto ...*/
+ul strong {
+    color: #00f;
+}
+
+/* SELECCION DE HIJO DIRECTO
+como su nombre lo indica tiene que ser netamente los primeros elementos q parten del padre, no lo s hijos de los hijos
+ul es el padre y li es el hijo directo*/
+ul > li {
+    background-color: aqua;
+}
+
+/* SELECCION DE HERMANO ADYACENTE
+nos coloca la primera condición que sean hermanos y tambein q sean secuencieales
+esa condicion nos señala q si tenemos un elemento h1 y si luego tiene un elemento p afectaremos a dicho elemento p*/
+h1 + p {
+    color: brown;
+}
+
+/* SELECCION DE HERMANOS
+aca solo nos importa si son hermanos o no*/
+h1 ~ li {
+    color: blueviolet;
+}
+
+/* SELECCION DE VARIOS ELEMENTOS
+solo los separamos con una "," brother*/
+h2, h2 + p {
+    color: chartreuse;
+}
+

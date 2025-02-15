@@ -1,0 +1,59 @@
+body {
+    margin: 40px;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    justify-content: space-evenly;
+    align-items: center;
+    /* ESTO AUNQUE SALGA DEL ESQUEMA DISPLAY-CHILD en el padre podemos declarar como un margin entre objetos no con el borde del padre importante, en donde con gap damos la separación, tambien podemos especificar si estos seran para la columna o para una fila pero testea estaba facil de entender*/
+    gap: 10px;
+}
+
+.flexbox__item {
+    text-align: center;
+    font-size: 64px;
+    background-color: #4d4d4d;
+    color: #dedede;
+    /* ORDER SOLAMENTE POSICIONA en q orden se pondran los bloques, el q tenga mayor order estara al último y el q tenga menor estara primero, como info extra se puede usar negativos*/
+    order: 2;
+    /* DEFINIMOS QUIEN SE ACHICARA MÁS A LA HORA DE REDUCIR LA PANTALLA, en este caso el q tenga más flex-shrink se reducira más rápido del q tenga menor valor, en caso q tengan mismos valores se reduciran a la misma escala*/
+    flex-shrink: 5;
+    /* DEFINE EL TAMAÑO q ocupara dentro del flexbox en sentido de tajadas, debemos sumar todos los felx-grow de los hijos de flexbox, y eso seria el numero de tajadas del flexbox y cada uno de estos se dividiria en el espacio q ocuparan es decir tenemos un total de tajadas de 4 vendiran a ser el 100% del espacio y si un objeto tiene 2 tendria de espacio el 50% del flexbox y el resto tendria un 25% 25% respectivamente
+    TODO estos cambios los notaremos al agrandar y de default, los cambios de flex shrink se notaran a la hora de achicar la pantalla*/
+    flex-grow: 3;
+    /* El flex basic funciona como el min-width es decir cual sera la escala mínima para q nuestros flexbox-item salten a otra linea, este funciona directamente proporcional a la dirección del main, en caso q trabajemos con row este sera como un min-width en caso q sea un column sera como un min-height, según dalto es recomendado usarlo como valor 0 y declarar el width-min aparte nose xq pero XDXDXD*/
+    min-width: 100px;
+    flex-basis: 0;
+    /* Para abreviar de manera rápida estas 3 propiedades: flex-grow flex-shrink flex-basic, nose si usar el min-width pero nose depende de tí quizas en el futuro lo sepas y pones la respuesta jiji*/
+    flex: 3 5 0;
+}
+
+.flexbox__item:first-child {
+    order: 1;
+    background-color: #8d8d8d;
+    flex-shrink: 1;
+    flex-grow: 3;
+}
+
+.flexbox__item:last-child {
+    order: 3;
+    background-color: #d8d8d8;
+    color: #4d4d4d;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.flexbox--margin {
+    margin-top: 40px;
+    height: 300px;
+    /* IMPORTANTE recordar q align self solo funcionara si el padre tiene align items*/
+    align-items: center;
+}
+
+.item--alignself {
+    /* Podemos cambiar el posicionamiento estandar q nos coloca el flexbox padre, con align-self pero esto solo afectara a un único hijo q es donde declaramos la propiedad*/
+    align-self: stretch;
+}

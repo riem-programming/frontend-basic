@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+/* IMPORTANTE habilitar la opcion de grid para ver las celdas y observes la alineacion de los elementos*/
+.grid {
+    height: 650px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    border: 3px solid #000;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    direction: ltr;
+    /* PROPIEDADES PARA AFECTAR EL CONTENIDO DE LAS CELDAS*/
+    
+    /* En primera instancia puede q paresca que hagan lo mismo start, self-starto right pero su principal difernecia perjudica a la propiedad direction:
+    STRETCH: con este valor es el que se encuentra de default en nuestros grid items lo que hace es rellenar todo el width que la celda lo permita
+    START: el elemento se alinea a la parte inicial de la dirección, en caso que estemos en direction ltr se pondra a la izquierda y en caso de ser rtl a la derecha
+    SELF-START: se comportara igual que start pero su un elemento hijo tiene otra direction nuestro bloque respetara eso y se posicionara al start de ese bloque, es decir si el padre tiene direction ltr todos se ponene a la izqueirda pero si su hijo tiene direction rtl ese bloque que este definido por esa propiedad sobreescribe para si mismo la direction de ltr COSA QUE NO OCURRE EN START que obliga a todos los hijos a estar en al direccion establecidad en el padre
+    RIGHT: se la suda direction y estara a la derecha si o ci*/
+    justify-items: start;
+    justify-items: self-start;
+    justify-items: right;
+    /* Tambien tenemos las posibilidaddes de center y [end,self-end,left] tambien esta baseline pero no es muy usada*/
+    /* TODO JUSTIFY-ITEMS: es para afectar a los elementos dentro de su celda y no a su contenedor en el eje horizontal, esta propiedad puede ser sobrescrita en los hijos remplezando items por self, justify-self*/
+    align-items: baseline;
+    align-items: start;
+    align-items: end;
+    align-items: center;
+    /* Lo mismo que justify solo que afectamos al eje horizontal del contenido de las celdas, en este caso solo usemos start, end ,center y baseline, tambien en el hijo podemos manipular esto con align-self*/
+
+    /* PROPIEDADES PARA AFECTAR A LAS CELDAS*/
+    /* Lo mismo que arriba solo que usamos justify-content y align-content, TODO ESTE POSICIONAMIENTO SE BASA EN EL TAMAÑO DEL PADRE GRID es importante saberlo para usarlo*/
+    justify-content: right;
+    align-content: end;
+
+}
+
+.grid__item:first-child {
+    background-color: #f8e;
+    direction: ltr;
+    /* Aplicamos las propiedades self para modificar las propiedades establecidas en el padre
+    NO OLVIDAR LA PROPEIDAD STRETCH*/
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.grid__item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+

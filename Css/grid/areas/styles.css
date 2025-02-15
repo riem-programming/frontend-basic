@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+.grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    /* Con grid area podemos realizar esta acción nosotros declarando de que manera se comodaran las celdas del grid y luego en cada item mencionar quien es header, quien es nav, quien es main y footer*/
+    grid-template-areas: 
+    "header header header header"
+    "nav main main aside"
+    "footer footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
+header {
+    background-color: antiquewhite;
+    /* Declaramos la area de la celda header*/
+    grid-area: header;
+    padding: 40px;
+}
+
+nav {
+    background-color: brown;
+    /* Declaramos la area de la celda nav*/
+    grid-area: nav;
+}
+/* y asi para el resto*/
+main {
+    background-color: azure;
+    grid-area: main;
+}
+
+aside {
+    background-color: blueviolet;
+    grid-area: aside;
+}
+
+footer {
+    background-color: cadetblue;
+    grid-area: footer;
+    padding: 40px;
+}

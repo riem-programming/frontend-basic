@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+/* IMPORANTE para que visualicemos los efectos de scroll-behavisor: smooth debemos habilitarlo en: chrome://flags/#smooth-scrolling y ponerle en enable el apartado de smooth scrolling*/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+    width: 50vw;
+    height: 100vh;
+    overflow: auto;
+    /* Al redireccionarnos con un href el scroll se movera de manera más suave y no instantanea, smooth = mas suave el bajar, con auto = de default instantaneo*/
+    scroll-behavior: smooth;
+    /* En esta función primero pintamos scroll y el segundo elemento define el fondo del scroll, es importante declarar ambos*/
+    scrollbar-color: #48e #fff;
+    /* Definir el tamaño del scroll, con auto es el de default, thin es un scroll más suavecito y none es desaparecer visualmente el scroll pero podemos bajar en celular con el dedo y en el mouse con la rueda del raton*/
+    scrollbar-width: thin;
+}
+
+/* POR LO GENERAL ESTO SOLO LE APLCIAMOS AL SCROLL DEL BODY jiji*/
+
+.crecer {
+    height: 200vh;
+}

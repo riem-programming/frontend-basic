@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.conteiner--fr {
+    display: grid;
+    /* Con la medida fr nosotros dividimos el espacio total del conteiner--fr en el width en la suma de los fr siendo a mayor número el tamaño del la casilla, es igual al flex-grow*/
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Lo mismo pero en este caso en el height*/
+    grid-template-rows: 1fr 4fr;
+    margin-bottom: 200px;
+}
+
+.conteiner--auto {
+    display: grid;
+    /* Lo que realiza la función auto es coger todo el contenido q sobra y lo divide en las columnas q tengan la función auto afectando su width, TODAVIA NO ESTA AL 100% PERO YA LO ENTENDEREMOS*/
+    grid-template-columns: auto auto 300px;
+    /* Lo mismo pero en este caso en el height*/
+    grid-template-rows: auto auto;
+    margin-bottom: 200px;
+}
+
+.conteiner--repeatandminmax {
+    display: grid;
+    /* Nosotros usamos el repeat para repetir una acción en concreo, primero declaramos el número de repeticiones y luego que vamos a repetir en este caso ponemos 3 columnas q mediran como minimo 100px y máximo 300px y 1 columna última con una medida de 1fr*/
+    grid-template-columns: repeat(3, minmax(100px,300px)) 1fr;
+    /* En este caso estamos repitiendo una sucesión donde vamos a repetir 2 veces la acción de colocar 1 fila de heigt 200px y luego una de 100px de height dando como resultado 4 filas, y al último ponemos 1 fila con altura de 1fr*/
+    grid-template-rows: repeat(2, 200px 100px) 1fr;
+}
+
+/* ES RECOMNDABLE USAR REPEAT Y MINMAX PARA TENER MEJOR LEGIBILIDAD EN LAS COSAS JIJI*/
+.conteiner {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+

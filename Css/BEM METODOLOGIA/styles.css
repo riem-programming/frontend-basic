@@ -1,0 +1,25 @@
+.list {
+    margin: 40px;
+    border: 2px solid #000;
+}
+
+.list--old{
+    opacity: 0.3;
+    background-color: #ddd;
+}
+
+.list__item {
+    color: #14f;
+    font-size: 20px;
+    list-style: square;
+}
+
+.item--peligroso {
+    color: #f00;
+}
+
+.item--importante {
+    color: #000;
+    font-weight: bold;
+}
+

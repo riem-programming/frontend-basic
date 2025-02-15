@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.box {
+    margin: auto;
+    padding: 6px;
+    background-color: #fff;
+    border: 4px solid #f44d;
+    border-radius: 30px;
+    width: 400px;
+}
+
+.box__bar {
+    width: 10%;
+    padding: 32px 0;
+    background-color: #f44d;
+    border-radius: 22px;
+    /* Creamos una animación de 1 segundo para cuando soltemos el elemento, es decir de regreso tenemos una animación de 1 segundo
+    LINEAR: es una transición como dice su nombre con una función constante*/
+    transition: width 1s linear;
+}
+
+.box__bar:active {
+    width: 100%;
+    /* Mientras ejecutamos la animación esta durara 3 segundos como máximo a comparación de cuando regresa que le declaramos como 1 segundo*/
+    transition-duration: 3s;
+}
+
+.box__steps {
+    border-color: #44f;
+}
+
+.box__bar--steps {
+    /* Declaramos que la animación se rellenera en 10 etapas, esta acción no atrasa la duración de la animación*/
+    transition: width 1s steps(10);
+    background-color: #44f;
+}
+
+/* EJEMPLO MEDIO FEO PERO DE COMO LO PODIRAMOS USAR DIFERENTES ANIMACIONES Y CONECTARALAS, el has espera un suceso para cambiar en box__transition*/
+
+.box__transition {
+    transition: border 1s;
+}
+
+.box__bar--transition {
+    transition: width 1s linear, background-color 1s linear;
+}
+
+.box__bar--transition:active {
+    background-color: #44f;
+    transition-duration: 3s;
+}
+
+.box__transition:has(.box__bar--transition:active) {
+    border: 4px solid #44f;
+    transition-duration: 3s;
+}
+
+/* Es una media querie que sirve para el tema de accesibilidad para gente con epilepsia, donde nosotros o aumentamos la duración de las animaciones o simplemente desactivamos, esto se activara para aquellas personas que usan herramientas para reducir las animaciones o transiciones*/
+@media (prefers-reduced-motion:reduce) {
+    .box__transition,  .box__bar--transition{
+        /* transition none*/
+        transition: width 5s, border 5s, background-color 5s;
+    }
+}

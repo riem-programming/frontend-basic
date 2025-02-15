@@ -1,0 +1,18 @@
+/* ESTO ES TEORIA DE LAS COSAS*/
+
+.container {
+    height: 100vh;      /* Agarramos todo el contenido de la pantalla ya sean en el dispositivo que estemos*/
+}
+
+
+.containerSVH {
+    height: 100svh;     /* Lo mismo que vh pero consideramos una opción en el celular, que es el 100% del vh considerara la parte superior del movil q tiene de espacio y el apartado de los botones de abajo q tiene todo celular*/
+}
+
+.containerLVH {
+    height: 100lvh;     /* Lo mismo que svh pero considera solamente la parte de abajo, más no q tuviera un espacio arriba el celular*/
+}
+
+.containerDVH {
+    height: 100dvh;     /* Dinamic View Height, si se extienden o abstraen las interfaces se adapta automaticamente, es perfecto recomendable usarlo siempre los demas solo son para teoria jiji*/
+}

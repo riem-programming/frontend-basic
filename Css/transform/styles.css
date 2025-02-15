@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: auto;
+    padding: 25px 50px;
+    background-color: #48e;
+    color: #434;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.container p {
+    margin: 0;
+    transform: scale(1);
+    scale: 2; /* Lo multiplica el tamaño del elemento por 2 el default es 1, en escale podemos especificar el crecimiento indicando su eje, lo podemos invocar de las 2 formas*/
+}
+
+
+.container2{
+    margin: auto;
+    padding: 25px 50px;
+    background-color: #48e;
+    color: #434;
+    font-weight: 500;
+    font-size: 3rem;
+
+    /* Colocamos un angulo de inclinación, es pocas palabras inclina nuestro bloque como si fuera cursiva algo asi jiji*/
+    transform: skew(20deg);
+    /* Rota totalemnte el bloque, empieza a darle vuelvas*/
+    transform: rotate(20deg);
+    /* Otra funcion que tenemos es translate que nos mueve el objeto en base a pixeles o medidas en el eje x o y
+    tenemos dos opcioens y en ambos el priemr parametro es el eje x y el sgundo el eje Y si solo asignamos 1 de default toma a X*/
+    transform: translate(200px,100px);
+    translate: 200px 100px;
+
+    transform: translate(200px) rotate(40deg);
+    /* Lo mismo que FILTER si quermos varias al mismo timepo sin que se chanquen declararlo en una linea*/
+}

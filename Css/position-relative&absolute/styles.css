@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-color: #eee;
+    margin: 40px;
+}
+
+.container {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    background-color: #eef;
+    border: 2px solid #111;
+    /* punto de referencia para el absolute*/
+    position: relative;
+}
+
+
+/* ES RECOMENDABLE DEFINIR DE DEFAULT CUAL ES EL Z-INDEX DE CADA ELEMENTO CREADO POR CONTAINER__BOX*/
+.container__box {
+    width: 100px;
+    height: 100px;
+    background-color: #9f6;
+    z-index: 10;
+}
+
+/* NOSOTROS DECLARAMOS COMO RELATIVE parap poder utilizar las opciones como top, left, right, bottom para mover el elemento como nosostros quedramos pero el tamaño otro objeto no lo puede remplazar, es decir nos movemos pero es como si nuestro cuerpo estuviera presente en la posicion inicial*/
+.box--red {
+    background-color: #f69;
+    position: relative;
+    bottom: 40px;
+    z-index: 20;
+}
+
+
+/* Para evitar esa condicion de relative, utilizamos absolute donde ya nuestro objeto es libre no comparte nd con la página ni tiene una posición en la página es un elemento suelto, donde sus coordenadas de referencia las buscara hasta llegar al elemento html si no encuentra, es por eso que en container lo definimos como relative porque sera un punto de referencia para los objetos q se encuentren dentro y quieran usar absolute, y tiene mucho sentido*/
+.box--blue {
+    /* en este ejemplo tendriamos una forma de centrar una caja platenando todos los lados como 0 y al ultimo margin auto*/
+    background-color: #69f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.box--violet {
+    /* aca ponemos en practica como funciona las coordenadas "0" cuando encuentra a un padre o pariente superior con display, es mágico*/
+    background-color: #d4d;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

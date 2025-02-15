@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 24px;
+}
+
+body {
+    font-size: 36px;
+}
+
+div {
+    background: #ddd;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-left: 5px solid #999;
+    font-size: 20px;
+    width: 80vw;
+    height: 80vh;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 10vh;
+    
+}
+
+h1 {
+    font-size: 1em; 
+}
+
+span {
+    color: #999;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+p {
+    color: #555;
+    font-size: 0.5rem; /* el rem se basa en la raiz (body), todos sus caracteristicas 1 = 100%*/
+    font-size: 1em;
+}
+

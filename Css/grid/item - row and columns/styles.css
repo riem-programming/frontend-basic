@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 200px;
+}
+
+.conteiner {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.conteiner:first-child {
+    background-color: red;
+    /* Con este comando para el hijo del grid nostros declaramos en donde empieza en tema de linea de columna en este caso en la linea 1 q es la primera de todo grid*/
+    grid-column-start: 1;
+    /* Con este comando mencionamos donde acabara de expandirse dicha columna en este caso la 3*/
+    grid-column-end: 3;
+    /* Con este comando estariamos definiendo estas 2 operaciones en 1 linea para q sea más legible*/
+    grid-column: 1/3;
+    /* Lo mismo para las filas pero añadiremos una función interesante*/
+    /* Empezamos en la fila 2 pero con span declaramos que donde nosotros empecemos vamos a sumarle 2 unidades en este caso empezamos en 2 y con span 2 tendriamos en grid-row-end 4 y sirve xq asi no tendremos q modificar el star y end sino solo el start y con span automaticamente se movera junto*/
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    grid-row: 2/span 2;
+}

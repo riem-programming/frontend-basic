@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Con esta querie nosotros indicamos q estos estilos vamos a aplicar en general a nuestro css, si el lugar donde estamos compilado nuestra página acepta display grid*/
+@supports (display: grid) {
+    .feature-queries {
+        display: grid;
+    }
+}
+
+/* En esta parte colocamos la condición de q en caso q la pagína donde se este ejecutando no acepta display grid nosotros respondemos a esa incomveniente con el siguiente css, q por ejemplo pusimos display flex*/
+@supports not (display: grid) {
+    .feature-queries {
+        display: flex;
+    }
+}
+
+p {
+    font-size: 24px;
+}
+
+/* LAS QUERIE CONTEINER, nos ayudan a estilizar un bloque en especifico bajo unas medidas de ancho con inline size, en donde nosotros podemos estilizar en un clase en geenral todo, pero en caso q una clase se necesie cambiar unas cosas extras podemos darle un nombre con container-name y este puede ser cualquiera y abajo colocamos q cosa diferente tendria*/
+.container {
+    background-color: #4dd;
+    /* En este modo tenemos 3 versiones las cuales la q más se usara es inline-size, pero pondre las otras de lo q entendi xdxd de emergencia testeala aparte:
+    inline-size: Mide el contenedor en base a su ancho
+    size: Mide el contenedor en base a las dimensiones del bloque o en linea, la verdad no entendi xdxd pero creo q se refiere q tmb considera la altura
+    normal: Es como quitarle la opcion q sea un querie conteiner*/
+    container-type: inline-size;
+}
+
+/* CONTEINER declarando un nombre*/
+.conteiner--small {
+    container-name: pene;
+}
+
+@container (max-width: 800px) {
+    p {
+        font-size: 34px;
+    }
+}
+
+/* Usando el nombre declarado para realizar otro cambios especificos*/
+@container pene (max-width: 800px){
+    p {
+        background-color: antiquewhite;
+    }
+}
+
+/* IMOPORTANTE DECLARAR el container-type*/

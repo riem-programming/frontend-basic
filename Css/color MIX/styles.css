@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    padding: 200px;
+    /* Declaramos srgb para trabajar con hexadecimales, luego colocamos un color escala y su intensidad, y luego el otro color que queremos combinar y tambien su intensidad, con eso vamos combinando;
+    normalmente se usa esto para aclarar o poner oscuro un color, poneoms un #000 o un #fff y vamos aumentando su porcentaje o jugando con ambos porcentajes jiji*/
+    background-color: color-mix(in srgb, #48e 100%, #000 40%);
+    width: 40%;
+}

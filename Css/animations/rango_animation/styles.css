@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    view-timeline: --cajita block;
+    background-color: #48e;
+    padding: 50px;
+    animation: llenar-barra;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-timeline: --cajita;
+    /* Explicación a lo god pero tenemos una pajita para ajustar recuerdos:
+    Con animation range start: asignamos cuanto tardara en empezar la animación, es decir 10% del scroll o 20% o empezar desde antes -20% o en 0%*/
+    animation-range-start: cover 0%;
+    /*Con animation range end: asignamos que tan antes va terminar la animación en base al scroll, en esto declaramos 40% o que termine al 20% más antes o al 80%*/
+    animation-range-end: contain 40%;
+    /* Cuando nos referimos a cover: esque la animación empiece ni bien se vea un poquito del elemento
+        Por otra parte con contain: nosotros no iniciamos la animación hasta que el elemento se vea completamente
+    TODO ESTOS PRINCIPIOS tambien se observan en el "end" en este caso contain antes de salir de la pantalla nos mostrara todo el elemento, por otra parte cover nos mostrara la parte finalizada cuando estemos al 100%*/
+    /* LA PAGINA DONDE PUEDES ENTENDER DE MEJOR MANERA LA IDEA: https://scroll-driven-animations.style/tools/view-timeline/ranges/#range-start-name=cover&range-start-percentage=0&range-end-name=cover&range-end-percentage=100&view-timeline-axis=block&view-timeline-inset=0&subject-size=smaller&subject-animation=reveal&interactivity=clicktodrag&show-areas=yes&show-fromto=yes&show-labels=yes
+    
+    El cuadrado se pone verde cuando la animación empieza a ejecutarse, nosotros podeoms modificar si trabajr con cover o contain y el % de start y end, y diferentes variantes jiji*/
+}
+
+.crecedor {
+    height: 100vh;
+}
+
+@keyframes llenar-barra {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

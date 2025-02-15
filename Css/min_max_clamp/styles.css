@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    /*display: flex;        POR ESTA CONDICION YA NO FUNCIONABA EL minimo width*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    margin-top: 200px;
+    background-color: #48e;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    /* Lo mismo que min, solo que escoge el mayor*/
+    width: max(600px,100%);
+    width: min(600px,100%);     /* Nosotros con la función min() escojemos el valor más pequeño es decir si con width 100% tenemos un width de 1200px escogemos 600px en un momento por la resolucion de nuestra pantalla la bajamos para que tenga 550px de 100vw entonces nuestro width 100% sera 550px siendo menor y ahora ya no escogemos como min 600px sino 100%; ESTA FUNCION POR LO GENERAL LO USAMOS PARA 2 VALORES, se puede con 3 pero para moento muuuuuuuuuy puntuales*/
+
+    /* En esta condicion primero declaramos el valor mínimo, luego el valor estandar, el valor máximo*/
+    width: clamp(800px,100%,1000px);
+    /* El problema radica totalemnte en el display flex, no considera el valor mínimo asi q una solucion seria ponerle min-width = 800px, pero si no usamos dispaly flex como padre, tood normal*/
+
+    font-size: clamp(0.5rem,2.2vw,2rem);  /* Establecemos un tamaño de letra minimo, la generica y la maxima, vuelve responsive al tamaño de texto*/
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}

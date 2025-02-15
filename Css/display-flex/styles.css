@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.flexbox{
+    display: flex;
+    /* DIRECTION NOS INDICA LA MANERA EN COMO DEFINIMOS LA DIRECCION, DE DEFAULT TODO LO VEMOS DE IZQEUIRDA A DERECHA PERO PARA PROYECTOS INTERNACIONALES ES UTIL DECLARARLO*/
+    direction: ltr;
+    /* DE QUE FORMA SE ACOMODARAN LOS ELEMENTOS tnato en fila row o en columna column y el orden alreves solo añaladir row-reverse colum-reverse*/
+    flex-direction: row;
+    /* LOS OBJETOS CUANDO LA PANTALLA NO LOS AGUANTE SU TAMAÑO LOS DESPLAZARA de manera normal para abajo o a la derecha pero si lo ponemos wrap reverse funcionara alreves, pero es su función de default eso esta nowrap*/
+    flex-wrap: wrap;
+    /* JUNTAMOS LAS PROPIEADADES flex-direction y flex-wrap*/
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    margin: 20px;
+    /* Alinia los elementos en el eje principal, esto lo defie flex direction
+    1) start: lo alinia al inicio de la direccion ltr o rtl
+    2) end: lo alinia al final de la direccion ltr o rtl
+    3) center: lo pone al centro sin ninguna separación tal cual los bloques
+    4) space-between: pone los bloques en el inicio, fin y centro, si excede va poniendolos en el centro entre esos ejes de referencia
+    5) space-around: separa los bloques en un mismo margin solo q digamos los bloques del centro tendrian doble separación debido a q su margenes no se juntan sino se sumaran
+    6) space-evenly: separa los bloques bajo el mismo margen igual para todos
+    TODOS ESTOS CAMBIOS SON RELACIONADOS CON SUS FILAS*/
+    justify-content: space-evenly;
+}
+
+.flexitem {
+    width: 180px;
+    background-color: #66d;
+    text-align: center;
+    font-size: 64px;
+    margin: 10px;
+}
+
+.flexitem:first-child{
+    background-color: #dd6;
+}
+
+.flexitem:last-child{
+    background-color: #6d6;
+}
+
+.flexbox--align {
+    height: 150px;
+    justify-content: space-between;
+    /* Alinia los elementos en el eje main, ya sea al inicio con start al final con end, al centro con center y tmb los pone en una alineación parecida a start solo q considera q los textos esten a la misma altura con baselinea*/
+    /*TODO ESTE FORMATO SOLO SE APLICA SI TENEMOS 1 FILA O 1 COLUMNA*/
+    align-items: baseline;
+}
+
+.flexbox--align .flexitem {
+    height: 70px;
+}
+
+.flexbox--align .flexitem:last-child {
+    font-size: 80px;
+    height: 120px;
+}
+
+.align--content {
+    height: 550px;
+    /* PARA MUCHAS FILAS O COLUMNAS NOSOTROS USAMOS align-content*/
+    /* APLICAMOS lo mismo que la función justify-content solo q podemos incluir todo sobre align-items, solo que este no afecta el eje main sino el eje opuesto*/
+    align-content:space-between;
+}
+
+
+/* UNA FORMA MUY FACIL DE CENTRAR EL ELEMENTO simplemente es declarar un contenedor como flex y luego al item le colocamos un margin auto, esto según observo funciona muy bien cuando es solo 1 elemento el de adentro*/
+.centerflex {
+    height: 400px;
+    width: 400px;
+    border: 2px solid #000;
+    margin: auto;
+    display: flex;
+}
+
+.centerflex__item {
+    text-align: center;
+    background: #0409;
+    margin: auto;       /* ESTE ES LA MAGIA*/
+    width: 100px;
+}
+
+/* ES IMPORTANTE RECORDAR Q TAMBIEN PODEMOS CENTRAR CON align-content center y justifi content center o tambien con justifi content center y align item center, pero esta forma q se dio a conocer es una muy fácil y muy recomendada por el momento solo sabemos q funciona bien para 1 elemento dentro*/

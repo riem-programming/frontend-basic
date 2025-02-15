@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+
+img {
+    margin: 0;
+    /* Estas lineas de codigos estamos definiendo un 
+    width = auto para q la imagen cresca y disminuya a su manera, con el max-width estamos aclarando q solo se agrandara esa imagen como máximo hasta q no pierda la calidad de la misma, es decir cuando agrandamos mucho una imagen esta empieza a proyectar muchos pixeles de mala calidad, con esto lo evitamos
+    y el height auto yo creo q esta de más pero Dalto dijo q es importante declararlo para evitar cositas jiji  */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Segun dalto nosotros debemos declarar lo siguinete en el conteiner un max width100% y el aspect ratio para q tengamos un formato 16/9 con el video*/
+.conteiner {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+/* Pero probnado solo veo q es necesario declararle un max-width = 100% y height = auto y ya funcionaria responsive igual xdxd yo creo q esta ves me quedo con mi opcion
+IMPORTANTE RECORDAR Q EL MAX-WIDTH no significa q no podemos usar el width para definir un tamaño estandar o inicial*/
+video {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+}

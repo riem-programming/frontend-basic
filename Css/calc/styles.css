@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.containerSmall {
+    height: 200px;
+    background-color: #48e;
+}
+
+.containerExpensive {
+    background-color: #e48;
+    /* Lo que realiza es realizar operaciones matematicas en donde podemos conveninar diferentes medidas en este caso con vh y poder tener un calculo perfecto del 100vh junto con pixeles
+    dicha funcion calc(argumento + argumento) es importante separalo por espacio, las operaciones que se puede relaizar es " +, -, *, / "*/
+    height: calc(100vh - 200px);
+}

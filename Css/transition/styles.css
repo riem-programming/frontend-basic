@@ -1,0 +1,44 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    position: relative;
+    left: 0;
+    /* EN TRANSITION podemos animar cualquier propiedad q dispongamos en css, en esta oportuindad procederemos a documentar cada opcion
+    SOLO NOS INDICA CUANTO TIEMPO DURARA LA TRANSICION*/
+    transition-duration: 4s;
+    /* SOLO NOS INDICA CUAL PROPIEDAD SERA AFECTADA POR LA TRANSICIÓN, recomendado nunca usar "all", en esta podemos declarar varias a la ves separandolos por ','*/
+    transition-property: left;
+    /* SOLO DECLARAMOS Q PATRON O FUNCION TENDRA LA ANIMACIÓN PARA LLEGAR A SU OBJETIVO*/
+    transition-timing-function: ease-out;
+    /* EL TIEMPO DE ESPERA PARA INICIAR LA TRANSICION*/
+    transition-delay: 0;
+}
+
+.box--delay {
+    transition-delay: 2s;
+    background-color: #0f0;
+}
+
+.box-cubicbezier {
+    /* EN ESTA OPCION PODEMOS DECLARA TODO EN 1 SOLA LINEA DE CODIGO, primero ponemos la propiedades afectadas, luego el tiempo de animación, luego el patron o función y al último el tiempo de delay*/
+    /* LA OPCION "cubic-bezier" buscarla en google y tu mismo puedes personalizar tus transiciones https://cubic-bezier.com/#.66,-0.54,.25,1.48*/
+    transition: left 4s cubic-bezier(.66,-0.54,.25,1.48) 1s, background-color 4s 1s;
+    
+}
+
+body:hover .box {
+    left: 300px;
+}
+
+body:hover .box-cubicbezier {
+    background-color: #00f;
+}
+
+/* MUY IMPORTANTE VERIFICAR Q LAS TRANSICIONES NO SE CORROMPAN ya sea xq estas declarandolo erroneamente puesto q una transición es un escalado de inicio a fin de un número 0 a una escala n, no puede ser un numero n a una escana n xq nos votaria error en este caso left si no lo declaramos en un inicio como left = 0 no funcionaria*/
+/* TAMBIEN COMO FUNCIONAN LAS TRANSICIONES JUNTAS si son compatibles o no*/

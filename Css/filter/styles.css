@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    /* una funcion simple de sombra que podemos aplicar con filter, en caso q le apliquemos con una imagen sin fondo el drop shadow en el bloque de la imagen, cada borde de la iamgen tendria sombra*/
+    filter: drop-shadow(0px 0px 15px #000);
+    /* Desenfoca el elemento a mayor pixeles o rem mayor desenfoque, esta funcion aplica dicho efecto al resto de sus elementos hijos*/
+    filter: blur(20px);
+    /* 0 es totalemnte oscuro, 1 lo normal, LO QUE HACE ES aumentar el brillo, se chanca su estilado con el blur*/
+    filter: brightness(2.5);
+    /* Lo que hace esq el contraste sea más evidente, los colores claros se vuelvan más claros y al mismo tiempo los oscuros más oscuros, 0 lo más oscuro 1 el default, chanca las funcioens blur o brightness*/
+    filter: contrast(1.5);
+    /* Convertir mi imagen a una escala de grises, en 0 lo volvemos blanco y negro, 1 es default, y a mayor valores podemos jugar, CHANCA las otras funcioens*/
+    filter: saturate(1);
+    /* Es mas preciso en el objetivo q es en valores de 0 a 1, 0 es default y 1 es blanco y negro, es lo mismo que saturate pero es más espceifico en el objetivo*/
+    filter: grayscale(0);
+    /* Googleamos hue rotate y nos saldra un circulo con valores, identificamos en q color estamos aproximadamente y lo q realizara es girar en grados los colroes que tenemos señados y nos formulara un resultado novedoso manteniendo las distancias iguales en colores, el giro es en sentido HORARIO, si le damos negativos sera antihorario, CHANCA LOS otros metodos fitler*/
+    filter: hue-rotate(120deg);
+
+    /*
+    No funciona en el backdrop: 
+    filter: opacity();      valores de 0 a 1 lo mismo q usar opacity tal cual
+    filter: invert();       coje todos los valores inversos de la paleta de colores que este usando los elementos, es decir chapas blanco sho te pongo negro y asi ..., su valor default es 0 hasta 1, en 0.5 es plomo total donde ya empieza a invertir primero pierde sus colores de 0 a 0.5 y luego invierte colores de 0.5 a 1 pero yo digo dejarlo tal cual invert(); y cojera el valor de 1
+    filter: sepia();        vuelve la paleta de colores al color sepia, como un filtro de instagram de 0 a 1, 0 defualt y 1 apuntando a sepia
+
+    */
+    border: 10px solid #fff;
+    background-color: transparent;
+    /* Es todo junto lo de filter, pero en ves de afectar a todos los elemntos dentro de si mismo, afecta aquellos elementos que esten atras de él, todas las funciones que señaalmos afectarian solo a la parte deonde este presente este elemento con backdrop-filter*/
+    backdrop-filter: hue-rotate(120deg);
+    position: absolute;
+    left: 200px;
+    /* IMPORTANTE CONFIRMAR, q al usar filter o backdrop-filter con varias acciones solamente debemos declararlo en una misma fila es decir filter: hue-rotate(120deg) grayscale(0.2) ..., ES IMPORTANTE entender que los filtros se aplicaran en el orden q los pongamos, de acuerdo al producto de un filtro el otro filtro trabajara y asi sucesivamente*/
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}

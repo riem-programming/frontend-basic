@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.box {
+    width: 100vw;
+    height: 200px;
+    /* Color de fondo del bloque*/
+    background-color: #a4d2;
+    /* Si queremos añadir una imagen al fondo*/
+    background-image: url("https://img.wattpad.com/a131f70e05abf2d4fe38054ab95eac5f7b9be032/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6f715758723263666b4169446e413d3d2d313134313635333635382e313661653363383062323336366631613130353638313632383532352e706e67");
+    /* De acuerdo a las dimensiones si exede se empieza a repetir*/
+    background-repeat: no-repeat;
+    /* Position de la imagen que generamos, la primera indica el eje "x" y el segundo el eje "y"*/
+    background-position: center 30%;
+    /* El tamaño de la imagen tenemos opciones cover = se acomoda estrictamente a todas las dimensiones sin importar si queda incompleta la imagen, contain mostrara la imagen si o si en su totalidad achicandolo automaticamente pero no llenando todo el bloque*/
+    background-size: cover;
+    /* Fixed nos muestra como animacion al bajar como si la imagen nos siguiera es decir estubiera fija, scroll es como lo tenemos de default y la iamgen se mantendra en su bloque */
+    background-attachment:fixed;
+    
+    /* Para declarar de manera general primero ponemos si tiene una url, luego la posicion, separamos con una "/" y continuamos con tamaño de la imagen, luego con las repeticiones, seguimos con el attachment y finalizamos con el color*/
+    background: url("https://img.wattpad.com/a131f70e05abf2d4fe38054ab95eac5f7b9be032/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6f715758723263666b4169446e413d3d2d313134313635333635382e313661653363383062323336366631613130353638313632383532352e706e67") center 30% / cover no-repeat fixed #a4d2;
+}
+

@@ -1,0 +1,31 @@
+
+body{ 
+    margin: 70px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #000;
+    padding: 10px 20px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    /* Lo que diferencia el outline con el border esq este no afecta a los otros elementos, es decir se maneja en otro eje 'z' es casi igual q es position absolute, fixed entre otros*/
+    outline: 40px solid #00f;
+}
+
+
+.input {
+    /* ES INCORRECTO DE ESTA FORMA KITARLE EL OUTLINE Q TIENE DE DEFAULT LOS INPUT*/
+    outline: none;
+}
+
+.input:focus {
+    /* TAMBIEN ES LA FORMA INCORRECTA DEBIDO A Q NOS BAJA en accesibilidad nuestra página*/
+    outline: none;
+}
+
+.input:focus-visible {
+    /* FORMA CORRECTA*/
+    outline: none;
+}

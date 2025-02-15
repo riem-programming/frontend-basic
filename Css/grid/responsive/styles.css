@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    /* Esta propiedad nosotros la aplicas junto a repeat, en donde las repeticiones seran automaticas y se acomodaran al primer eje principal siempre y cuando puedan ingresar con sus medidas minimas especificadas en este caso con minmax pero no es necesario usar eso para q funcione, pero si RECOMENDADO para tener mejor legibilidad y responsive*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.conteiner {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* La caracteristicia distintiba de auto-fit esque el tamaño de la celda se va acomodar al 100% del bloque padre si no encuentra ningun otro elemento para llenar el espacio de la fila*/
+.grid--fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.contiener--red {
+    background-color: red;
+}
+
+/* A diferencia del grit fit en este caso a pesar que no tengamos elementos seguira reservando el espacio para un elemento dando asi el efecto como si no creciera pero en realidad si lo hace pero cuando llega un punto reserva el especio para otro elemento ya sea q exista o no*/
+.grid--fill {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+/*TODO estas difernecias solo se aplican si trabajamos elementos en una sola fila o una sola columna, cuando tengmoas más de 1 ya serian iguales*/
+.conteiner--violet {
+    background-color: violet;
+}
+
+
+
+.conteiner:hover {
+    opacity: 0.74;
+}

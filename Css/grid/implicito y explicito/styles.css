@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+/* Nos referimos a los contenidos explicitos aquellos donde nosotros definimos las medidas que dispondran para un número exacto de celdas de la grid, es decir en este caso lo explicito seria lo declarado dentro de grid-template-columns and rows
+Que pasa con aquellos elementos que exceden las definiciones establecidas en grid-template-columns and rows esas se consideran contenidos implicitos*/
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px) 100px;
+    /* Para manipular contenido implcito tenemos que utilizar grid-auto-columns y grid-auto-rows dependiendo del grid-auto-flow que queramos establecer, es decir en el grito auto flow definimos la dirección en donde nustros elementos van a exceder y se posicionaran de default lo tenemos en row, donde los elementos excedentes se añadiran como filas pero no exdederan para las columnas, lo mismo pero alreves sucederia para grid auto flow column*/
+    grid-auto-flow: column;
+    /* Ya que estamos trabajando con columnas para controlar el exceso de elementos lo que hacemos es establecer el ancho de cada columna en este caso 400px, en caso q trabajemos con rows usariamos grid auto rows para controlar ese excedente*/
+    grid-auto-columns: 400px;
+}
+
+.conteiner {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}

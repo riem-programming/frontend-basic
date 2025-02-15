@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div {
+    border: 4px solid #e48;
+}
+
+/* Como width escogera el minimo valor para que encaje la pieza más grande de su contenido y esa establecera el min width*/
+.min-content {
+    width: min-content;
+}
+
+/* Ocuparemos todo el espacio que necesite nuestros elementos hijos para q ingresen no le importara romper el width del padre*/
+.max-content {
+    width: max-content;
+}
+
+/* Es una combinación entre min y max, donde pondra como width el espacio justo y necesario para que ingrese todo el contenido, respetando el width maximo del padre*/
+.fit-content {
+    width: fit-content;
+}
+
+/* En el ultimo ejemplo podemos ver la diferencia, donde con auto establecemos un width 100% y no justo y necesario para el contenido*/
+.auto {
+    width: auto;
+}
+
+
+/* TESTING, si hablamos no con bloques escogeria en base al tamaño jiji*/
+
+.test {
+    margin: auto;
+    width: 800px;
+    pad: 10px 20px;
+    border: 4px solid #e48;
+}
+
+.test__item {
+    border: none;
+    margin: 10px 0;
+    background: #48e;
+}
+
+.test__item:first-child {
+    width: max-content;   
+}
+
+.test__item:nth-child(2) {
+    width: fit-content;
+}
+
+.test__item:nth-child(3) {
+    width: auto;
+}
+
+.test__item:last-child {
+    width: min-content;   
+}

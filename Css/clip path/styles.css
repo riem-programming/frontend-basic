@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+.container {
+    width: 40%;
+    max-height: 20%;
+    border: 10px solid #48e;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    /* Realizamos recortes de nuestra imagen con esta funcion es importante mejor usar solo paginas: https://bennettfeely.com/clippy/ ,poner generador de clip-path y usas y copais el codigo*/
+    clip-path: polygon(39% 4%, 56% 3%, 57% 67%, 75% 77%, 60% 96%, 29% 96%, 13% 73%, 36% 64%);
+}

@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* Importante ponerlo en un contenedor flex*/
+    display: flex;
+    background-color: #f44;
+}
+
+.text-conteiner {
+    display: flex;
+    
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    /* Luego apliarle el auto para que se centre el conteiner de text, para q se vea la generación del texto desde el inicio con 1 letra, xq el destino sera llegar al centro*/
+    margin: auto;
+
+}
+
+.text {
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: 20px;
+    font-family: sans-serif;
+    animation: grow 1.5s both steps(8);
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes grow {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: 100%;
+    }
+}
+
+.text::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    animation: titilar 1s infinite;
+}
+
+@keyframes titilar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

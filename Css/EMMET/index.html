@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing EMMET</title>
+</head>
+<body>
+    <!-- Forma de crear estructuras uno dentro de otra con el simbolo '>'
+    header > nav -->
+    <header>
+        <nav></nav>
+    </header>
+    
+    <!-- Forma de crear una clase en un elemento de default
+    header.claseheader-->
+    <header class="claseheader"></header>
+
+    <!-- Forma de crear el contenido dentro de un elemento '{}'
+    header{contenidoheader}-->
+    <header>contenidoheader</header>
+
+    <!-- Forma de crear varios elementos: tenemos dos opciones multiplicando al padre o agrupando entre parentesis como si fuera ecuaciones y multiplicar
+    header*4>nav o (header>nav)*4 -->
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+    <header>
+        <nav></nav>
+    </header>
+
+    <!-- Para crear un contador dependiendo de las repeticiones podemos utilizar el simbolo "$" dentro de los corchetes "{}"
+    ul>li*4>a{Elemento $}-->
+    <ul>
+        <li><a href="">Elemento 1</a></li>
+        <li><a href="">Elemento 2</a></li>
+        <li><a href="">Elemento 3</a></li>
+        <li><a href="">Elemento 4</a></li>
+    </ul>
+
+    <!-- Todo junto header>nav.nav>ul.nav__list>li.nav__item*4>a.nav__link{Link $}-->
+    <header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="" class="nav__link">Link 1</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Link 2</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Link 3</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Link 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</body>
+</html>

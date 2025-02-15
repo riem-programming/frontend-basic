@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+
+.grid__item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Cuando achicamos la pantalla notamos un problema que al requerir 2 espacios en la grilla para poner nuestro bloque y arriba tengamos 1 hueco libre este al no caber se queda vacio y nos daria problemas en tema de como se veria la grilla, para solucionar eso encontramos al función grid-auto-flow y le damos el valor dense*/
+.grid__item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid--dense {
+    margin-top: 200px;
+    /* Perderemos el orden de los objetos pero tendremos todos los huecos cubiertos siempre y cuando caba un objeto, podemos notar un detalle cuando achicamos de más pero eso solo se arreglaria ajustando el span column o row de los elementos*/
+    grid-auto-flow: dense;
+}

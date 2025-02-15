@@ -1,0 +1,53 @@
+/* QUE HERMOSA LA FUNCION INHERIT, puesto q busca un padre q tenga esos atributos que queremos heredar dependiendo de la propiedad q señalemos*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444;
+    margin-top: 40px;
+}
+
+form {
+    margin: auto;
+    width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 100;
+    color: #ddd;
+    background-color: transparent;
+}
+
+h1{
+    font-weight: inherit;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    border-bottom: inherit;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 0;
+    border: inherit;
+}
+

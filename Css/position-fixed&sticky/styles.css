@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background-color: #dedede;
+}
+
+.publicity {
+    width: 300px;
+    height: 150px;
+    color: #dedede;
+    background-color: #4d4d4d;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 10px;
+    /* COMO SU NOMBRE LO DELATA LA POSICIÓN FIXED, PONE FIJO NUESTRO ELEMENTO EN LA PESTAÑA, PERO CON LA CONDICIÓN Q ESTE SERA FIJO PERO A NUESTRA PESTAÑA Q ESTEMOS VIENDO, es decir si navegamos por la página para abajo, este se quedara pegado en nuestra pantalla y bajara con nosotros en la misma posición, su posición lo manipulamos con top right left bottom*/
+    position: fixed;
+    top: 70%;
+    right: 0;
+}
+
+.publicity__title {
+    margin: 0;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+.publicity__text {
+    margin-top: 4px;
+    text-align: justify;
+    font-size: 0.8em;
+}
+
+.nav {
+    margin: 0;
+    background-color: #4d4d4d;
+    /* Este es un demo de un nav no es como se debe realizar en terminos de usos de elementos asi q no imitar, pero lo q demostramos aqui es la función de sticky.
+    LA CUAL NOS BRINDA UNA COMBINACIÓN ENTRE position relative y fixed, en donde nosotros por medio de las coordenadas definimos q cuando pasen los x pixeles q definamos en top button right o left el elemento dejara q ser position relative y pasara a ser un fixed hasta q regrese a su posición original
+    IMPORTANTE TENER CUIDADO CON LOS Z-INDEX mejor tener controlados aquellos elemetnos q lo utilizan*/
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+.nav__list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+    color: #dedede;
+    margin: 0 5%;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    border-top: 4px solid #dedede;
+    font-size: 2em;
+}
+
+.nav__item:hover {
+    background-color: #dedede;
+    color: #4d4d4d;
+    box-shadow: 0 0 35px #4d4d4d;
+}
+
+/* EN ESTA PARTE APRECIOMAOMS MEJOR LA DIFERNECIA DE STICKY con ese bloque q se mantiene normal hasta q llegamos a un top equivalente a 49.6 y se transforma en un fixed pero cuando volvemos a subir regresa a su estado normal como relative*/
+.box {
+    width: 300px;
+    height: 100px;
+    background-color: #f00;
+    position: sticky;
+    top: 49.6px;
+    z-index: 10;
+}

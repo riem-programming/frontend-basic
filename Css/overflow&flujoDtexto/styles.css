@@ -1,0 +1,38 @@
+body {
+    margin: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.box {
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    background-color: #ededed;
+    border: 2px solid #000;
+    /* El overflow controla los desbordamientos para los textos según observo, el más utilizado es es overflow auto y hidden, el auto lo q nos hace esq en caso tengamos un desbordamiento nos saldra una barra para deslizar para abajo en el mismo bloque, mientras q hidden simplemente cortara ese estracto y no le importara mostrar todo el contenido solamente apunta a q no se desborde*/
+    overflow:auto;
+    /* BALANCEA LAS LINEAS DE TEXTO PARA Q NO TERMINE con una sola palabra sino q tenga 2 o 3 como mínimo
+    en conclu solo usemos esta propiedad para parrafos*/
+    text-wrap: pretty;
+}
+
+.box__text {
+    margin: 0;
+}
+
+h1 {
+    /* BALANCEA LAS LINEAS DE TEXTO para q sean con el mismo número de caracteres y en conclu solo debemos usarlo para titulos o subtitulos no para parrafos*/
+    text-wrap: balance;
+}
+
+.box--custom {
+    margin-top: 10px;
+}
+
+.box--custom p {
+    /* Con estas 3 propiedades directamente en el parrafo podemos hacer para q en caso tengamos un desbordamiento se aplique la clasica de continuara con "..." pero solo observo q funciona para 1 sola linea*/
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}

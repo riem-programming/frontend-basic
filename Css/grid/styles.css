@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.grid {
+    /* Primer dato curioso de grid, esq los margenes de las columnas y de las filas ya no combinan sino se suman, es decir tenemos 2 bloques y estan uno alado del otro donde uno tiene un margin y el otro tmb si uno tiene 10 y el otro 10 simplemente su diferencia seria de 10 margin pero con display grid estos margin se suman y serian de 20*/
+    display: grid;
+    /* CON ESTA PROPIEDAD ESTABLECEMOS LA CANTIDAD DE COLUMNAS QUE TENDRAN Y LAS MEDIDAS SON PARA EL WIDTH DE CADA COLUMNA EN ESTE CASO 30% PARA LA COLUMNA 1 Y 500PX PARA LA COLUMNA 2 Y 20% PARA LA COLUMNA 3*/
+    grid-template-columns: 30% 500px 20%;
+    /* CON ESTA PROPIEDAD ESTABLECEMOS LA CANTIDAD DE FILAS QUE TENDRAN Y LAS MEDIDAS SON PARA EL HEIGHT DE CADA FILA EN ESTE CASO 400PX PARA LA FILA 1 Y 300PX PARA LA FILA 2*/
+    grid-template-rows: 400px 200px;
+}
+
+.conteiner {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+

@@ -1,0 +1,17 @@
+div {
+    background: red;
+    width: 400px;
+    height: 100px;
+}
+
+/*Dependiendo de la caja que contiene al objeto en este caso form a input su ancho sera el 90% del mismo */
+
+input {
+    width: 90%;
+}
+
+form {
+    background: black;
+    width: 500px;
+}
+

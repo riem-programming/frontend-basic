@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    /* Nosotros tambien podemos declarar una referencia para que ocurra una animación cuando se vea el objeto cajita*/
+    view-timeline: --cajita block;
+    background-color: #48e;
+    padding: 50px;
+    animation: llenar-barra;
+    animation-timing-function: linear;
+    /* La animacion empezara a correr en el momento que nosotros observemos al elemento, por defecto view se auto señala pero tambien podemos poner otros elemento que se tenga q ver para que empiece nuestra animación*/
+    animation-timeline: view();
+    animation-timeline: --cajita;
+}
+
+.crecedor {
+    height: 100vh;
+}
+
+@keyframes llenar-barra {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        background-color: #e48;
+    }
+}

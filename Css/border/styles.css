@@ -1,0 +1,43 @@
+body {
+    background: black;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.box {
+    background: white;
+    width: 300px;
+    height: 100px;
+    margin-top: 30px;
+    /* PARTE DE BORDER*/
+    /* Especificamos el grosor primero, luego el tipo de borde y al ultimo el color*/
+    border: 10px solid greenyellow;
+    /* Para este apartado estamos redondenando 10 pixeles la esquina superior izquierda y la inferior derecha, como una raya y lo que sobra para el 5 pixeles */
+    border-radius: 10px 5px; 
+    /* Para esto empezamos desde la esquina superior izquierda y giramos de manera horaria para cada esquina*/
+    border-radius: 10px 15px 20px 25px;
+    /* Para esto cambiamos todos los bordes*/
+    border-radius: 20px;
+    /* La diferencia de usar pixeels con porcentaje esq porcentaje redondea desde el centro del elemento en cambio pixeles lo redondea desde la esquina creando como un minicuadrado*/
+    border-radius: 20%;
+    /* Para los bordes podemos especificar tambien con q borde trabajos si el de arriba abajo: bottom top right left*/
+}
+
+div {
+    margin:auto
+}
+
+input {
+    width: 90%;
+    margin: 5px;
+    padding: 6px 9px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid greenyellow;
+    color: greenyellow;
+}
+
+.input_special {
+    margin-top: 30px;
+}

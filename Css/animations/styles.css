@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: auto;
+    background: #fff;
+    border: 4px solid #44f;
+    padding: 6px;
+    border-radius: 45px;
+    width: 600px;
+}
+
+.bar {
+    width: 10%;
+    padding: 50px 0;
+    border-radius: 30px;
+    background-color: #44f;
+    /* Asignamos el nombre de la animación*/
+    animation-name: llenar-barra;
+    /* Asignamos la duración de la animación, con esto es suficiente para que funcione*/
+    animation-duration: 1s;
+    /* Opcional tenemos el delay para demore en iniciar la animación*/
+    animation-delay: 2s;
+    /* Con esta propiedad podemos controlar si se mantendra con los cambios realizados por la animación o nop, en esta opcion tenmos 4 propiedades:
+    Both: La más usada, lo que realiza es iniciar con las propiedades de from y luego pasar a la animación de to, Si nosotros tenemos un background en nuestro elemento con esta opción lo ingnoramos y solo consideramos el de from, para este ejemplo iniciamos con #f44 y terminamos con #4f4 ignorando al #44f de default de nuestro elemento .bar
+    Forwards: es igula que both pero en este caso inciamos con los valores del contenedor .bar #44f y luego cambiamos a "from" y por ultimo a "to", CONCLU de estado inicial tenemos las propiedades del elemento donde aplicamos la animación
+    Backwards: ignora los cambios que realice la animación, pero inicializa igual que both con los estilos de from y termina con los de to
+    None: igual de backwards solo que iniciliza con los estilos del elemento donde aplicamos la animación .bar #44f y luego cambiamos a "from" y por ultimo a "to"*/
+    animation-fill-mode:both;
+    /* Elegimos el patron que seguira la animación*/
+    animation-timing-function: linear;
+    /* Elegimos el numero de repeticiones como tambien podemos elegir que sea infinito con infinite*/
+    animation-iteration-count: 4;
+    /* Elegimos la dirección que seguira nuestra animación:
+    alternate: la animación tendra la el siguinete patron de dirección empezara en from -> to -> from -> to ...
+    alternate-reverse: simplemente modifica el orden de la animación: to -> from -> to -> from ..."
+    normal: es la q tiene default que simplemente la animación sigue le patron from -> to | from -> to ..., repite la acción de from -> to todo el tiempo y se ve menos natural
+    reverse: lo mismo que normal pero alrevez */
+    animation-direction: alternate-reverse;
+}
+/* ES IMPORTANTE RECORDAR QUE ALTERNATIVE CADA MOVIMIENTO CUENTA COMO UNA ITERACIÓN, y que el delay solo se considera al inicio de la iteración pero para las siguiente no aplicara, TAMBIEN SI PONEMOS delay con negativos es como adelantarnos la animación -2 = adelantar 2 segundos de la duración de la animación*/
+
+.bar:active {
+    /* PAUSA LA ANIMACIón y convinado con el :active, obtendriamos cuando hagamos click a la .bar detendremos la animación de fault  animation-play-state = running*/
+    animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
+    from {
+        background-color: #f44;
+        width: 10%;
+    }
+    to {
+        background-color: #4f4;
+        width: 100%;
+    }
+}

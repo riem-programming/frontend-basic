@@ -1,0 +1,27 @@
+body {
+    margin: 30px;
+}
+
+.box {
+    background: black;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.box_special {
+    margin-top: 30px;
+}
+
+.box_uwu {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    padding: 50px 0 0 50px;
+}
+
+/* margin como el padding tienen la misma idea para realizar separación 
+margin: 1px 2px 3px 4px -> el 1 afecta al top, 2 al derecha, 3 abajo y 4 izquierda como aguja de reloj
+margin: 1px 2px -> el 1 afecta al margen vertical y el 2 al horizontal como aguja de reloj
+el margin no afecta la estructura interna del elemento en cambio el padding ci*/
+

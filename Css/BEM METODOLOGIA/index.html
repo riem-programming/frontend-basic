@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- EN ESTA NOMENCLATURA ES IMPORTANTE RECONOCER 3 POSIBLES ESCENARIOS
+    1° El contenedor | BLOQUES
+    2° Sus elementos del contenedor | ELEMENTOS
+    3° Las especificaciones de un elemento del contenedor | MODIFICACION
+
+    Para el primer escenario solamente le colocamos un nombre cualquiera
+    Para el segundo caso colocamos primero su nombre del contenedor padre y luego separamos con "__" el nombre del elemento
+    Para el tercer caso, nombramos a que elemento modificaremos, puede ser su nombre elemento si estamos ante un elemento de un contenedor o el mismo contenedor separamos con un '--' y siguiente ponemos el proposito del cambio o un identificador-->
+    <ul class="list">
+        <li class="list__item item--peligroso">elemento 1</li>
+        <li class="list__item">elemento 2</li>
+        <li class="list__item">elemento 3</li>
+        <li class="list__item item--importante">elemento 4</li>
+    </ul>
+    <ul class="list list--old">
+        <li class="list__item item--peligroso">elemento 1</li>
+        <li class="list__item">elemento 2</li>
+        <li class="list__item">elemento 3</li>
+        <li class="list__item item--importante">elemento 4</li>
+    </ul>
+    <ul class="list">
+        <li class="list__item item--peligroso">elemento 1</li>
+        <li class="list__item">elemento 2</li>
+        <li class="list__item">elemento 3</li>
+        <li class="list__item item--importante">elemento 4</li>
+    </ul>
+</body>
+</html>

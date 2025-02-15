@@ -1,0 +1,27 @@
+p {
+    /* Modifica el color de la letra*/
+    color: brown;
+    /* La primera fuente de letra sera fantasy en caso que falle pasara arial y asi sucesivamente*/
+    font-family: fantasy, Arial, Helvetica, sans-serif;  
+    /* Cambia el tamaño de letra */
+    font-size: 20px;
+    /* Cambia el grosor de la letra*/
+    font-weight: normal;
+    /* Cambia la inclinación de la letra: normal->italic->oblique*/
+    font-style:italic;
+    /* Alinia el texto derecha,izquierda,centro y justificado
+    Tambien se puede usar start o end que es lo mismo en cierto punto a derecha o izquierda*/
+    text-align: center;
+    /* Subraya el texto ya sea arriba, abajo o en el cetro para tachar, otra opcion es none para quitarle todos los estilos de deafult que les da un elemnto como <a href="link">
+    tachar = line-through
+    abajo = underline
+    arriba = overline
+    extra podemos colocar varias rayas al mismo tiempo solo separando con un espacio
+    */
+    text-decoration: underline overline;
+    /*Interlinieado de texto */
+    line-height: 2;
+    /*Espaciado entre letras del texto */
+    letter-spacing: 3px;
+}
+

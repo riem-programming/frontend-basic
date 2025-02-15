@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.box {
+    /* ESTABLECEMOS el tamaño mínimo q puede llegar tu box*/
+    min-width: 400px;
+    /* Establecemos el tamaño máximo q puede crecer tu box directamente proporcional al tamaño de la pantalla ya sea celular o tablet o escritorio donde vemoas pero no superara el tamaño de 800px*/
+    max-width: 800px;
+    /* Si queres q sea responsive el tamaño lo q podemos definir es el tamaño mínimo de altura pero no definir el maximo xq siempre el contenido tiene a crecer o variar puesto q los elementos al width bajar se van para abajo
+    LA MEJOR MANERA SERIA INCLUSO NO DEFINIR EL HEIGHT pero en caso sea necesario como min-height*/
+    min-height: 200px;
+    background-color: #7bf;
+}
+
+/*Esto lo separe xq con margin auto centra las cosas y en flex quiero centrarlo de otra manera q es usando q es justify jiji*/
+.box--center {
+    margin: auto;
+}
+
+
+/* UN EJEMPLO DE COMO APLICAR EL MIN AND MAX WIDTH EN ELEMENTO PADRE Y HIJO DE FLEX*/
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.box--responsive {
+    /* El inline-block siento q es muy innecesario pero todavia no tengo la certeza para afirmalo pero es como lo veo*/
+    display: inline-block;
+    max-width: 300px;
+    min-width: 250px;
+    min-height: auto;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+
+.box--responsive:first-child {
+    background-color: #fb4;
+}
+.box--responsive:last-child {
+    background-color: #4bf;
+}
