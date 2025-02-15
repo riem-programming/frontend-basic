@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing with JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenteditable, como su nombre lo dice hace q se pueda modificar el contenido, de default es false-->
+    <!-- DIR, es la direccion del texto, ltr de izquierda a derecha alreves para rtl y auto solo lo define deacurdo a la nacion en la q se abra el programa, lo normal es usar CSS para modificar eso-->
+    <!-- Hidden lo que hace es desaparecer al elemento, ya sea su valor true o false, siendo la unica forma de volverlo a ver es eliminando el atributo-->
+    <!-- Tittle, simplemnete cuando señalemos con el mouse saldra ese texto informativo-->
+    <h1 
+    class="titulo" 
+    contenteditable="false"
+    dir="auto"
+    hidden=""
+    title="este es un titulo"
+    >Este es un titulo</h1>
+
+    <!-- El tabindex sirve para el asunto de tabular en el orden q queremos, es decir al apretar tab primero nos mostrara el q tenga menor número de orden el 1 o el 0, y asi hasta llegar al mayor-->
+    <p tabindex="1">0</p>
+    <p tabindex="2">1</p>
+    <p tabindex="3">2</p>
+    <p tabindex="4">3</p>
+    <p tabindex="5">4</p>
+    <p tabindex="6">5</p>
+    <p tabindex="7">6</p>
+    <script src="script.js"></script>
+</body>
+</html>
