@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-primary: #4c3a51;
+  --bg-secondary: #774360;
+  --bg-red-chip: #b25068;
+  --bg-yellow-chip: #e7ab79;
+}
+
+body {
+  background-color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+aside {
+  width: 60vw;
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+aside h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-aside {
+  margin-top: 12px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 24px;
+}
+
+.result-game {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.result-game p:first-child {
+  color: var(--bg-red-chip);
+}
+
+.result-game p:last-child {
+  color: var(--bg-yellow-chip);
+}
+
+.result-game p span {
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+#button-start {
+  min-width: 160px;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+#button-start:hover {
+  background-color: #aaa;
+}
+
+.resetButton {
+  outline: 1px solid #ddd;
+  border-radius: 36px;
+  color: #ddd;
+}
+
+main {
+  width: 60vw;
+  height: 80vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  filter: drop-shadow(0 3mm 4mm rgba(0, 0, 0, 0.4));
+}
+
+.content {
+  width: 35vw;
+  aspect-ratio: 7/6;
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* grid-template-rows: repeat(6,1fr); */
+  border-radius: 12px;
+  /* 7/6 */
+}
+
+.content-child {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  padding: 6px 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* .invisible {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 4.3vw;
+    aspect-ratio: 6/6;
+    border-radius: 100%;
+    background-color: black;
+} */
+
+.content-child:hover {
+  background-color: #664360;
+}
+
+.no-hover:hover {
+  background-color: transparent !important;
+}
+
+.chip {
+  background-color: var(--bg-primary);
+  border-radius: 100%;
+}
+
+.chip-win {
+  position: relative;
+  overflow: hidden;
+  animation: rotate 1s ease-in-out 1s infinite;
+}
+
+.chip-win::before {
+  content: "+";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  80%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chip-active-red {
+  background-color: var(--bg-red-chip);
+  border: 0.5px solid #ffffff22;
+}
+
+.chip-active-yellow {
+  background-color: var(--bg-yellow-chip);
+  border: 0.5px solid #00000044;
+}
+
+.chip-active-red-hover {
+  background-color: var(--bg-red-chip);
+}
+
+.chip-active-yellow-hover {
+  background-color: var(--bg-yellow-chip);
+}
+
+.dialog {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  padding-top: 220px;
+}
+
+.dialog-container {
+  background-color: white;
+  width: 420px;
+  padding: 36px 24px;
+  padding-bottom: 36px;
+  position: relative;
+  border: none;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.dialog::backdrop {
+  background-color: #00000033;
+  backdrop-filter: blur(1px);
+}
+
+.dialog h4 {
+  font-size: 24px;
+}
+
+.dialog .section-button {
+  display: flex;
+  gap: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  margin: auto;
+  margin-top: 36px;
+  background-color: #f7d61a;
+  padding: 14px 0;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #00000022;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.v1 {
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+
+.v1:hover {
+  background-color: transparent;
+  border-color: black;
+}
+
+.v2 {
+  background-color: white;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.v2:hover {
+  background-color: white;
+  opacity: 0.7;
+}
+
+
+/* por mejorar */
+/* .box-shadow-red {
+    box-shadow: inset 0px 0px 4px 0px var(--bg-red-chip);
+}
+
+.box-shadow-yellow {
+    box-shadow: inset 0px 0px 4px 0px var(--bg-yellow-chip);
+} */
+
+.button_reset_score {
+  padding: 8px;
+  border-radius: 100%;
+  background-color: transparent;
+  color: #ddd;
+  cursor: pointer;
+}

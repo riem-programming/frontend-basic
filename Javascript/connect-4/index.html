@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect 4 - game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Evitar solicitud de favicon -->
+    <link rel="icon" href="data:," />
+  </head>
+  <body id="body">
+    <button style="display: none" id="test-stop">STOP</button>
+    <button style="display: none" id="test-start">START</button>
+    <!-- <button id="test-modal">asdasdsa</button> -->
+    <aside>
+      <h1>Connect 4</h1>
+      
+      <div class="content-aside">
+        <button class="button_reset_score">
+          <p>Reset</p>
+          <p>Score</p>
+        </button>
+        <div class="result-game">
+          <p>Wins Player Red: <span id="score-red">0</span></p>
+          <p>Wins Player Yellow: <span id="score-yellow">0</span></p>
+        </div>
+        <button id="button-start">Start Game</button>
+      </div>
+    </aside>
+    <main>
+      <div class="content">
+        <div class="content-child" id="col-1">
+          <div class="chip" id="1"></div>
+          <div class="chip" id="2"></div>
+          <div class="chip" id="3"></div>
+          <div class="chip" id="4"></div>
+          <div class="chip" id="5"></div>
+          <div class="chip" id="6"></div>
+        </div>
+
+        <div class="content-child" id="col-2">
+          <div class="chip" id="7"></div>
+          <div class="chip" id="8"></div>
+          <div class="chip" id="9"></div>
+          <div class="chip" id="10"></div>
+          <div class="chip" id="11"></div>
+          <div class="chip" id="12"></div>
+        </div>
+
+        <div class="content-child" id="col-3">
+          <div class="chip" id="13"></div>
+          <div class="chip" id="14"></div>
+          <div class="chip" id="15"></div>
+          <div class="chip" id="16"></div>
+          <div class="chip" id="17"></div>
+          <div class="chip" id="18"></div>
+        </div>
+
+        <div class="content-child" id="col-4">
+          <div class="chip" id="19"></div>
+          <div class="chip" id="20"></div>
+          <div class="chip" id="21"></div>
+          <div class="chip" id="22"></div>
+          <div class="chip" id="23"></div>
+          <div class="chip" id="24"></div>
+        </div>
+
+        <div class="content-child" id="col-5">
+          <div class="chip" id="25"></div>
+          <div class="chip" id="26"></div>
+          <div class="chip" id="27"></div>
+          <div class="chip" id="28"></div>
+          <div class="chip" id="29"></div>
+          <div class="chip" id="30"></div>
+          <!-- <div class="invisible"></div> -->
+        </div>
+
+        <div class="content-child" id="col-6">
+          <div class="chip" id="31"></div>
+          <div class="chip" id="32"></div>
+          <div class="chip" id="33"></div>
+          <div class="chip" id="34"></div>
+          <div class="chip" id="35"></div>
+          <div class="chip" id="36"></div>
+        </div>
+
+        <div class="content-child" id="col-7">
+          <div class="chip" id="37"></div>
+          <div class="chip" id="38"></div>
+          <div class="chip" id="39"></div>
+          <div class="chip" id="40"></div>
+          <div class="chip" id="41"></div>
+          <div class="chip" id="42"></div>
+        </div>
+      </div>
+    </main>
+
+    <audio src="Sounds Effect/sound-click-v2.wav" id="songClick"></audio>
+    <audio src="Sounds Effect/sound-game-over.wav" id="songGameOver"></audio>
+    <audio
+      src="Sounds Effect/sound-notification.wav"
+      id="songNotification"
+    ></audio>
+    <audio src="Sounds Effect/sound-game-start.mp3" id="songGameStart"></audio>
+    <audio src="Sounds Effect/sound-game-draw.mp3" id="songGameDraw"></audio>
+
+    <dialog id="myDialog" class="dialog">
+      <div class="dialog-container">
+        <h4 id="nameWinner">Player RED WIN</h4>
+
+        <div class="section-button">
+          <button id="close-button" class="button v1">Close</button>
+          <button id="confirm-button" class="button v2" autofocus>Reset Game</button>
+        </div>
+        <div class="close-modal" id="closeDialog-svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#000000"
+              d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"
+            />
+          </svg>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js" type="module"></script>
+    <script src="test.js" type="module"></script>
+  </body>
+</html>
